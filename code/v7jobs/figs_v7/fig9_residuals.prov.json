@@ -1,0 +1,62 @@
+{
+ "figure": "Fig. 9 residual acceptance check",
+ "date": "2026-10-14T08:45:37",
+ "script": "fig_v7_all.py",
+ "script_sha256": "ebad34266f4fa97040dc94be396dd0a5fa298a11eb8cdc5b31af0259f02685cf",
+ "engine_sha256": "ff4a692dbbd465b045bd82519ed7602d918793ddbfe9484d1912c59411a7b2f8",
+ "engine_consistent": true,
+ "engine_expected_prefix": "ff4a692d",
+ "engine_matches_expected": true,
+ "other_code_hashes": [],
+ "inputs_without_engine_hash": [],
+ "inputs": [
+  {
+   "path": "edge7_MoS2_TNN.json",
+   "sha256": "380c0ce354f85414272d4b87cfb6c526f6b97a69ff67f963e030b2ff6d316c04",
+   "engine_sha256": "ff4a692dbbd465b045bd82519ed7602d918793ddbfe9484d1912c59411a7b2f8"
+  },
+  {
+   "path": "edge7_MoSe2_TNN.json",
+   "sha256": "9e43cdd24e488297a2fd3ea5f7415b853c59f49a1a771f8728610ea365871948",
+   "engine_sha256": "ff4a692dbbd465b045bd82519ed7602d918793ddbfe9484d1912c59411a7b2f8"
+  },
+  {
+   "path": "edge7_WS2_TNN.json",
+   "sha256": "838f2d004c7e3ad6650f0d0903025db1b460b11ef597146506389c0dcef9769c",
+   "engine_sha256": "ff4a692dbbd465b045bd82519ed7602d918793ddbfe9484d1912c59411a7b2f8"
+  },
+  {
+   "path": "edge7_WSe2_TNN.json",
+   "sha256": "358b164c50b6759f1ee0b3f5e34b75c78bd8903913c8c19eb9d51dc3f0199fd6",
+   "engine_sha256": "ff4a692dbbd465b045bd82519ed7602d918793ddbfe9484d1912c59411a7b2f8"
+  },
+  {
+   "path": "edge7_MoS2_NN.json",
+   "sha256": "ec3525d8b4ffd75ccd03a2ab43643a532357e592cd4b52aefe7ad5d68b9dbafb",
+   "engine_sha256": "ff4a692dbbd465b045bd82519ed7602d918793ddbfe9484d1912c59411a7b2f8"
+  },
+  {
+   "path": "edge7_MoSe2_NN.json",
+   "sha256": "fef2b159877a3ad5697e2a1a0ba2a337a718ae909044e2b89591c970cea21bfc",
+   "engine_sha256": "ff4a692dbbd465b045bd82519ed7602d918793ddbfe9484d1912c59411a7b2f8"
+  },
+  {
+   "path": "edge7_WS2_NN.json",
+   "sha256": "06dc7f85295e24343f42edbf21713833df233ab6d5e2ca253d6ae7e58065a329",
+   "engine_sha256": "ff4a692dbbd465b045bd82519ed7602d918793ddbfe9484d1912c59411a7b2f8"
+  },
+  {
+   "path": "edge7_WSe2_NN.json",
+   "sha256": "fb187e92a01a0f3b7ac13af1b27875b67e7940818b33de304fcd91304fd284fa",
+   "engine_sha256": "ff4a692dbbd465b045bd82519ed7602d918793ddbfe9484d1912c59411a7b2f8"
+  }
+ ],
+ "python": "3.13.7",
+ "numpy": "2.5.3",
+ "matplotlib": "3.11.1",
+ "cwd": "/Users/abirmehta/Desktop/Code/CM/Claude outputs/code/v7jobs",
+ "verdict": "PASS",
+ "max_abs_residual_pct": 0.044557666073512546,
+ "output": "fig9_residuals.pdf",
+ "output_sha256": "4c69dfeb2969361fca12cc2b82b7c037211846f04eb2999aab129aa89c4b56ca"
+}

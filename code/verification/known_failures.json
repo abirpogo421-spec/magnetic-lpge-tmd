@@ -1,0 +1,91 @@
+{
+ "_comment": "Per-check expected-failure baselines (documented paper/data findings). A FAIL equal to its baseline is reported as KNOWN; any new or changed item is a FAIL. Rewrite only with --accept-known after review.",
+ "entries": {
+  "C8|max stored C3 violation where |eta| >= 10% of max (v7)": {
+   "measured": "3.0328058734320416",
+   "items": [
+    "prod7_MoS2_F.npz max 1.8e+00 median 4.5e-05",
+    "prod7_MoSe2_F.npz max 6.8e-01 median 1.2e-03",
+    "prod7_WS2_F.npz max 2.3e+00 median 1.2e-02",
+    "prod7_WSe2_F.npz max 3.0e+00 median 2.5e-02"
+   ],
+   "reason": "prod7 (N=600) under-resolves the moment velocity shift near crossings of the two upper bands: WSe2 3.0-3.5 eV above ~20 T (stated in the Fig. 8 caption); MoS2 2.36-2.55 eV and WS2 2.60-2.79 eV only where |eta| ~ 10% of max (checks/c4_hotspots: N=900 moves eta by 4% and 7% there)",
+   "accepted": "2026-10-14",
+   "report": "reports/2026-10-14_0750_fast.md"
+  }
+ },
+ "resolved": {
+  "C8|max stored C3 violation where |eta| >= 10% of max (v6 (pre-fix, until prod7 lands))": {
+   "measured": "1.4110870694907809",
+   "items": [
+    "prod_MoS2_F.npz max 5.1e-01 median 2.8e-03",
+    "prod_MoSe2_F.npz max 3.3e-01 median 2.6e-03",
+    "prod_WS2_F.npz max 6.5e-01 median 7.6e-03",
+    "prod_WSe2_F.npz max 1.4e+00 median 1.0e-02"
+   ],
+   "reason": "v6 full-BZ maps under-resolve the 10 meV Lorentzian (raw C3 violation up to 51%); replaced by prod7 after the queue",
+   "accepted": "2026-10-14",
+   "resolved": "2026-10-14",
+   "resolution": "v6 maps replaced by prod7 (v7); the new C8 finding is recorded under its own entry"
+  },
+  "G2|printed digits vs registry values": {
+   "measured": "233 ok, 2 wrong",
+   "items": [
+    "fig10.lin.NN: value 0.0150931 -> '1.509 < 1.5' but paper prints '1.5' [edge7 data: 1.509% (NN MoS2)",
+    "mode ['tagged']",
+    "psf.thr.max: value 0.382035 -> '38' but paper prints '22'",
+    "the s B + c B^3 fit alone gives 1.498%",
+    "vs d eta/dB at 30 T 3.0%]"
+   ],
+   "reason": "paper findings in the final text (2026-10-14): theory 'changes the threshold chi by 5--22%' is 5-38% over the four materials (WS2 -38%, engine h=0.002/a); Fig. 10 caption NN '1.5%' is 1.509% in the edge7 data; text edit pending",
+   "accepted": "2026-10-14",
+   "report": "reports/2026-10-14_0750_fast.md",
+   "resolved": "2026-10-14",
+   "resolution": "final text: 'by $5$--$40\\%$' (theory) and 'about $1.5\\%$' vs the zero-field slope (Fig. 10 caption)"
+  },
+  "G6|printed method parameters vs producing scripts": {
+   "measured": "27 ok, 12 differ",
+   "items": [
+    "edge.R.results: paper '0.6' (= 0.6) but v7jobs/edge_v7.py uses 0.9 [finding 9.1]",
+    "edge: 2 T (GGA), 10 T (LDA)]",
+    "fig7.N: paper '900' (= 900) but v7jobs/maps_v7.py uses 600",
+    "fig8.N: paper '900' (= 900) but v7jobs/maps_v7.py uses 600",
+    "fig9.h: paper '0.001' (= 0.001) but v7jobs/run_v7_queue.sh uses 0.0007 [v7 edge runs use 0.0007/a]",
+    "param.B.step: paper '3' (= 3) but v7jobs/maps_v7.py uses 1 [v7 maps: 1 T steps",
+    "param.edge.R.methods: paper '0.6' (= 0.6) but v7jobs/edge_v7.py uses 0.9 [finding 9.1: runs use 0.9/a]",
+    "param.edge.h.methods: paper '0.001' (= 0.001) but v7jobs/run_v7_queue.sh uses 0.0007 [finding 9.1: runs use 0.0007/a]",
+    "param.maps.N.a: paper '900' (= 900) but v7jobs/maps_v7.py uses 600 [finding 9.1: the v7 maps use N=600]",
+    "param.maps.N.b: paper '900' (= 900) but v7jobs/maps_v7.py uses 600",
+    "param.maps.nom: paper '1101' (= 1101) but v7jobs/maps_v7.py uses 900 [the v7 maps use 900 photon energies from 0.95 E_g to 1.05 x the largest interband energy]",
+    "param.maps.omhi: paper '2.6' (= 2.6) but v7jobs/maps_v7.py uses 1.05 [v7: 1.05 x Emax]",
+    "param.maps.omlo: paper '-0.15' (= -0.15) but v7jobs/maps_v7.py uses 0.95 [v7: 0.95 E_g]"
+   ],
+   "reason": "Methods/captions describe v6 settings (900 mesh, 0.6/a, 0.001/a, 1101 omega, 3 T steps); paper edit pending",
+   "accepted": "2026-10-14",
+   "resolved": "2026-10-14",
+   "resolution": "Methods and captions describe the v7 settings (stage-2 edits S01-S06)"
+  },
+  "G7|assertion predicates": {
+   "measured": "21 hold, 1 fail, 2 pending",
+   "items": [
+    "fig10.lin.NN: 1.509 < 1.5 fails for printed '1.5'"
+   ],
+   "reason": "Fig. 10 caption: NN eta(30 T)/30 T vs chi differs by 1.509% (MoS2), not < 1.5%; text edit pending",
+   "accepted": "2026-10-14",
+   "report": "reports/2026-10-14_0750_fast.md",
+   "resolved": "2026-10-14",
+   "resolution": "Fig. 10 caption now says 'about 1.5%' against the zero-field slope (fig10.lin.NN is a derived value, 1.509%)"
+  },
+  "P6|Fig. 7 legend energies (pdftotext) == registered van Hove energies vH.E.*": {
+   "measured": "MoS2 3.35, MoSe2 3.04, WS2 3.60, WSe2 2.99",
+   "items": [
+    "MoSe2: legend 3.04 vs text 3.05"
+   ],
+   "reason": "the paper copy still holds the v6 Overleaf figure PDFs (Fig. 7 legend shows MoSe2 3.04 eV; text 3.05); replace Figs. 7-12 with the fig_v7_all.py outputs and their sidecars",
+   "accepted": "2026-10-14",
+   "report": "reports/2026-10-14_0750_fast.md",
+   "resolved": "2026-10-14",
+   "resolution": "Figs. 7-12 replaced by the fig_v7_all.py outputs (ebad3426) with sidecars; the Fig. 7 legend reads 3.05 eV"
+  }
+ }
+}

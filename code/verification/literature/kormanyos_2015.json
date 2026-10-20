@@ -1,0 +1,166 @@
+{
+ "source": "Kormanyos et al., 2D Mater. 2, 022001 (2015); arXiv:1410.6666v3 (used as equivalent to the published version); corrigendum 2D Mater. 2, 049501 changes only Table 12 and Appendix A",
+ "transcription": "verbatim rows from pdftotext of arXiv:1410.6666v3 (teams/X/X1/kormanyos_1410.6666v3_pdftotext.txt), lines 683-760 and 1075-1093",
+ "spin_label_quote": {
+  "page": 20,
+  "text": "Therefore in the VB the upper index (1) ((2)) is equivalent to ↓ (↑), but in the CB the relation depends on which material is considered."
+ },
+ "materials": [
+  "MoS2",
+  "MoSe2",
+  "WS2",
+  "WSe2"
+ ],
+ "table6": {
+  "page": 21,
+  "caption": "Table 6. k · p parameters at the K point. In columns labelled by “DFT” the parameters obtained with the help of DFT band gap are shown",
+  "column_used": "DFT",
+  "rows": {
+   "Ebg,K [eV]": {
+    "header": "Ebg,K [eV]",
+    "DFT": [
+     1.67,
+     1.4,
+     1.6,
+     1.3
+    ],
+    "GW": [
+     2.8,
+     2.26,
+     2.88,
+     2.42
+    ]
+   },
+   "|gamma| [eV A]": {
+    "header_verbatim": "|γ| [eV·Å] (HSE,LDA)",
+    "DFT": [
+     2.76,
+     2.53,
+     3.34,
+     3.17
+    ],
+    "GW": [
+     2.22,
+     2.2,
+     2.59,
+     2.6
+    ]
+   },
+   "kappa_up [eV A^2]": {
+    "header_verbatim": "κ↑ [eV·Å2 ] (HSE,LDA)",
+    "spin_label": "↑",
+    "DFT": [
+     -1.48,
+     -1.31,
+     -1.24,
+     -1.11
+    ],
+    "GW": [
+     -1.84,
+     -1.49,
+     -1.6,
+     -1.36
+    ]
+   },
+   "kappa_dn [eV A^2]": {
+    "header_verbatim": "κ↓ [eV·Å2 ] (HSE,LDA)",
+    "spin_label": "↓",
+    "DFT": [
+     -1.45,
+     -1.23,
+     -1.09,
+     -0.93
+    ],
+    "GW": [
+     -1.8,
+     -1.4,
+     -1.41,
+     -1.14
+    ]
+   },
+   "alpha_dn [eV A^2]": {
+    "header_verbatim": "α↓ [eV·Å2 ] (HSE,LDA)",
+    "DFT": [
+     -6.43,
+     -5.71,
+     -7.95,
+     -6.93
+    ]
+   },
+   "beta_dn [eV A^2]": {
+    "header_verbatim": "β↓ [eV·Å2 ] (HSE,LDA)",
+    "DFT": [
+     0.54,
+     -0.52,
+     4.0,
+     2.35
+    ]
+   }
+  }
+ },
+ "table3": {
+  "page": 14,
+  "caption": "Table 3. Band dispersion parameters and spin-splittings at the K and −K points in the CB from DFT calculations.",
+  "rows": {
+   "mcb(1)/me (HSE,LDA)": [
+    0.46,
+    0.56,
+    0.26,
+    0.28
+   ],
+   "mcb(2)/me (HSE,LDA)": [
+    0.43,
+    0.49,
+    0.35,
+    0.39
+   ],
+   "2Dcb [meV] (HSE,LDA)": [
+    3,
+    22,
+    -32,
+    -37
+   ]
+  }
+ },
+ "table4": {
+  "page": 15,
+  "caption": "Table 4. Effective masses and spin-splittings at the K point in the VB from DFT calculations.",
+  "rows": {
+   "mvb(1)/me (HSE,LDA)": [
+    -0.54,
+    -0.59,
+    -0.35,
+    -0.36
+   ],
+   "mvb(2)/me (HSE,LDA)": [
+    -0.61,
+    -0.7,
+    -0.49,
+    -0.54
+   ]
+  }
+ },
+ "interpretation": {
+  "band_edge_pair": "A pair = upper VB at K = VB index (1) = spin ↓ in Kormanyos' labels (p. 20 quote)",
+  "kappa_column": "kappa_dn [eV A^2]",
+  "valence_mass_row": "mvb(1)/me (HSE,LDA)",
+  "conduction_mass_row": {
+   "MoS2": "mcb(2)/me (HSE,LDA)",
+   "MoSe2": "mcb(2)/me (HSE,LDA)",
+   "WS2": "mcb(1)/me (HSE,LDA)",
+   "WSe2": "mcb(1)/me (HSE,LDA)"
+  },
+  "E_A": "Ebg,K (DFT) + max(0, -2Dcb): the A gap; for WX2 the lowest CB has the other spin",
+  "predicates": [
+   "L4a: the chosen kappa column carries the spin label that the p.20 quote assigns to the upper VB (1)",
+   "L4b: A-pair masses (m_c>0, m_v<0) agree with the TB active-spin band-edge masses in sign and in the ordering |m_v|>m_c, and each lies within x1.6 of TB",
+   "L4c: the A-pair masses fit TB better than the B-pair masses (sum of relative errors)",
+   "L4d: kp/kp_fp_all_v7.py KORM (AST-parsed) equals this table under the interpretation above"
+  ]
+ },
+ "used_in": [
+  "kp/kp_fp_all_v7.py KORM",
+  "paper Table II column kappa (Ref. kormanyos2015kp)",
+  "paper Sec. III C first-principles kappa range"
+ ]
+}

@@ -1,0 +1,60 @@
+{
+ "figure": "Fig. 7 lpge_field_merged",
+ "date": "2026-10-14T08:45:35",
+ "script": "fig_v7_all.py",
+ "script_sha256": "ebad34266f4fa97040dc94be396dd0a5fa298a11eb8cdc5b31af0259f02685cf",
+ "engine_sha256": "ff4a692dbbd465b045bd82519ed7602d918793ddbfe9484d1912c59411a7b2f8",
+ "engine_consistent": true,
+ "engine_expected_prefix": "ff4a692d",
+ "engine_matches_expected": true,
+ "other_code_hashes": [],
+ "inputs_without_engine_hash": [],
+ "inputs": [
+  {
+   "path": "prod7_MoS2_F.npz",
+   "sha256": "827eef4c8617422baacd79703dfc7ece3a863f9e343ea5f382e533dde1de38e1",
+   "engine_sha256": "ff4a692dbbd465b045bd82519ed7602d918793ddbfe9484d1912c59411a7b2f8"
+  },
+  {
+   "path": "prod7_MoSe2_F.npz",
+   "sha256": "ceed61fcdb35efd1945bddf6b4582d57751002343b6c5809b3b4b5b9925efb1d",
+   "engine_sha256": "ff4a692dbbd465b045bd82519ed7602d918793ddbfe9484d1912c59411a7b2f8"
+  },
+  {
+   "path": "prod7_WS2_F.npz",
+   "sha256": "f3fc8a28e48abc8b1c8100f048ec23a360c511e8d0c09ff3f0754098c30108f7",
+   "engine_sha256": "ff4a692dbbd465b045bd82519ed7602d918793ddbfe9484d1912c59411a7b2f8"
+  },
+  {
+   "path": "prod7_WSe2_F.npz",
+   "sha256": "b09168e063f84073ba96cddfd2d69fff46b9a75bfc16c618566bb1e3b1fb3be0",
+   "engine_sha256": "ff4a692dbbd465b045bd82519ed7602d918793ddbfe9484d1912c59411a7b2f8"
+  },
+  {
+   "path": "decomp7_MoS2.json",
+   "sha256": "a9f0a5b696a1e16d6bdf1294a4a37f90f1e1e830bae6553c5a30b018fad54f5a",
+   "engine_sha256": "ff4a692dbbd465b045bd82519ed7602d918793ddbfe9484d1912c59411a7b2f8"
+  },
+  {
+   "path": "decomp7_MoSe2.json",
+   "sha256": "5063d068e75fd2679167b2af1fb83ebd33831bf480deb77ec09d4b00366c2e68",
+   "engine_sha256": "ff4a692dbbd465b045bd82519ed7602d918793ddbfe9484d1912c59411a7b2f8"
+  },
+  {
+   "path": "decomp7_WS2.json",
+   "sha256": "8f3702e9a7b7aeaaa255204ce875d8bfe41b0e6792dccf48f452365b465bbe62",
+   "engine_sha256": "ff4a692dbbd465b045bd82519ed7602d918793ddbfe9484d1912c59411a7b2f8"
+  },
+  {
+   "path": "decomp7_WSe2.json",
+   "sha256": "c1fabcf35a2b6b2f9bd3d939cdc4377d348c25a96807d325f0b874350a8f471d",
+   "engine_sha256": "ff4a692dbbd465b045bd82519ed7602d918793ddbfe9484d1912c59411a7b2f8"
+  }
+ ],
+ "python": "3.13.7",
+ "numpy": "2.5.3",
+ "matplotlib": "3.11.1",
+ "cwd": "/Users/abirmehta/Desktop/Code/CM/Claude outputs/code/v7jobs",
+ "output": "lpge_field_merged.pdf",
+ "output_sha256": "6eb69dd96625cc1a28cfb31b1fdbb1ee628b3e33ad6882de3d19bc81e85bd41e"
+}

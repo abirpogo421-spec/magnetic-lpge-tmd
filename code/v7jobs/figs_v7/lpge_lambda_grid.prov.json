@@ -1,0 +1,40 @@
+{
+ "figure": "Fig. 12 lpge_lambda_grid",
+ "date": "2026-10-14T08:45:39",
+ "script": "fig_v7_all.py",
+ "script_sha256": "ebad34266f4fa97040dc94be396dd0a5fa298a11eb8cdc5b31af0259f02685cf",
+ "engine_sha256": "ff4a692dbbd465b045bd82519ed7602d918793ddbfe9484d1912c59411a7b2f8",
+ "engine_consistent": true,
+ "engine_expected_prefix": "ff4a692d",
+ "engine_matches_expected": true,
+ "other_code_hashes": [],
+ "inputs_without_engine_hash": [],
+ "inputs": [
+  {
+   "path": "lam7_MoS2_F.npz",
+   "sha256": "1b47bd3088daa8256fd868eaf6db245c65b6d1e30184d2091477b18feb3e5bd2",
+   "engine_sha256": "ff4a692dbbd465b045bd82519ed7602d918793ddbfe9484d1912c59411a7b2f8"
+  },
+  {
+   "path": "lam7_MoSe2_F.npz",
+   "sha256": "eef4e55479b1a74ed7607ded14b518301aedcdde86b368c44c61d447c819903e",
+   "engine_sha256": "ff4a692dbbd465b045bd82519ed7602d918793ddbfe9484d1912c59411a7b2f8"
+  },
+  {
+   "path": "lam7_WS2_F.npz",
+   "sha256": "c33f076593c0e935c6261646521a53ef611bc63fc14f48d40123ec5f13726ff6",
+   "engine_sha256": "ff4a692dbbd465b045bd82519ed7602d918793ddbfe9484d1912c59411a7b2f8"
+  },
+  {
+   "path": "lam7_WSe2_F.npz",
+   "sha256": "03acc18cf6bed291b282a352555652b332130a8921e9a6e1aaab9c33aec4347f",
+   "engine_sha256": "ff4a692dbbd465b045bd82519ed7602d918793ddbfe9484d1912c59411a7b2f8"
+  }
+ ],
+ "python": "3.13.7",
+ "numpy": "2.5.3",
+ "matplotlib": "3.11.1",
+ "cwd": "/Users/abirmehta/Desktop/Code/CM/Claude outputs/code/v7jobs",
+ "output": "lpge_lambda_grid.pdf",
+ "output_sha256": "71aee0ef43dc49382282842c5d0104e039149ab5d4984ba47f2cb3bdbd4f60a4"
+}

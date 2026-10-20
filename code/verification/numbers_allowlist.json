@@ -1,0 +1,941 @@
+{
+ "_comment": "Numbers in the paper that are not claims (protocol sec. 5 allow-list). Proposed by verify_all.py --scan-numbers (status 'proposed' for Abir); set approved=true and status='approved' after reading each one. Inputs, numerical settings and data counts may NOT be listed here: they must be claims.",
+ "entries": [
+  {
+   "file": "main.tex",
+   "value": "three",
+   "context": "ting the full three-band tight-bi",
+   "class": "count-of-objects",
+   "reason": "count word",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/introduction.tex",
+   "value": "0",
+   "context": "nics}.\n\nAt $B=0$, the point-g",
+   "class": "definition",
+   "reason": "limit/condition (B=0, T=0, ...)",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/introduction.tex",
+   "value": "three",
+   "context": "_2}$ with the three-band tight-bi",
+   "class": "count-of-objects",
+   "reason": "count word",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/introduction.tex",
+   "value": "four",
+   "context": "itive for all four materials. Ne",
+   "class": "count-of-objects",
+   "reason": "count word",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/introduction.tex",
+   "value": "four",
+   "context": "ative for all four materials and",
+   "class": "count-of-objects",
+   "reason": "count word",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/introduction.tex",
+   "value": "four",
+   "context": "gn across the four monolayers, a",
+   "class": "count-of-objects",
+   "reason": "count word",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/theory.tex",
+   "value": "three",
+   "context": "mputed in the three-band tight-bi",
+   "class": "count-of-objects",
+   "reason": "count word",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/theory.tex",
+   "value": "0",
+   "context": "($\\varepsilon=0$). The four p",
+   "class": "definition",
+   "reason": "limit/condition (B=0, T=0, ...)",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/theory.tex",
+   "value": "four",
+   "context": "ilon=0$). The four panels are, l",
+   "class": "count-of-objects",
+   "reason": "count word",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/theory.tex",
+   "value": "0",
+   "context": " (a) NN at $B=0$, (b) TNN at ",
+   "class": "definition",
+   "reason": "limit/condition (B=0, T=0, ...)",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/theory.tex",
+   "value": "0",
+   "context": "repeat the $B=0$ bands.}\n    ",
+   "class": "definition",
+   "reason": "limit/condition (B=0, T=0, ...)",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/theory.tex",
+   "value": "0",
+   "context": " $\\hat{L}_z = 0$~\\cite{xiao20",
+   "class": "definition",
+   "reason": "limit/condition (B=0, T=0, ...)",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/theory.tex",
+   "value": "0",
+   "context": "D_{3h}$ ($B_z=0$) and under t",
+   "class": "definition",
+   "reason": "limit/condition (B=0, T=0, ...)",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/theory.tex",
+   "value": "0",
+   "context": "D_{3h}$ ($B_z=0$) & $B_z\\neq0",
+   "class": "definition",
+   "reason": "limit/condition (B=0, T=0, ...)",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/theory.tex",
+   "value": "1",
+   "context": ")$\n& $\\beta$ (1 indep.)\n& $\\b",
+   "class": "count-of-objects",
+   "reason": "number of independent components",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/theory.tex",
+   "value": "0",
+   "context": "m.\\ $(bc)$\n& $0$\n& $\\alpha$ (",
+   "class": "definition",
+   "reason": "limit/condition (B=0, T=0, ...)",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/theory.tex",
+   "value": "1",
+   "context": "$\n& $\\alpha$ (1 indep.) \\\\\nEl",
+   "class": "count-of-objects",
+   "reason": "number of independent components",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/theory.tex",
+   "value": "0",
+   "context": "ven & antisym.\\ $[bc]$\n& $0^{\\,\\ast}$\n& $0^{\\,\\ast}$ ",
+   "class": "definition",
+   "reason": "limit/condition (B=0, T=0, ...)",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/theory.tex",
+   "value": "0",
+   "context": "odd & antisym.\\ $[bc]$\n& $0^{\\,\\ast}$\n& $0^{\\,\\ast}$ ",
+   "class": "definition",
+   "reason": "limit/condition (B=0, T=0, ...)",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/theory.tex",
+   "value": "2",
+   "context": "st}$In strict 2D at normal in",
+   "class": "definition",
+   "reason": "dimension / polytype label",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/theory.tex",
+   "value": "0",
+   "context": "e*}\nAt $B_z = 0$ time reversa",
+   "class": "definition",
+   "reason": "limit/condition (B=0, T=0, ...)",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/theory.tex",
+   "value": "0",
+   "context": "_n-f_m$ at $B=0$), and $\\vare",
+   "class": "definition",
+   "reason": "limit/condition (B=0, T=0, ...)",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/theory.tex",
+   "value": "0",
+   "context": "eversal at $B=0$~\\cite{xiao20",
+   "class": "definition",
+   "reason": "limit/condition (B=0, T=0, ...)",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/theory.tex",
+   "value": "0",
+   "context": "ce $g_{xx}\\ge 0$ everywhere, ",
+   "class": "definition",
+   "reason": "limit/condition (B=0, T=0, ...)",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/theory.tex",
+   "value": "0",
+   "context": "ow Fig.~\\ref{fig:bands}: (a) NN and (b) TNN at $B=0$, (c) NN and (d) TNN under the Zeeman field. The ",
+   "class": "definition",
+   "reason": "limit/condition (B=0, T=0, ...)",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/theory.tex",
+   "value": "0",
+   "context": "ymmetry at $B=0$ (a,b). Under",
+   "class": "definition",
+   "reason": "limit/condition (B=0, T=0, ...)",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/theory.tex",
+   "value": "0",
+   "context": "ow Fig.~\\ref{fig:bands}: (a) NN and (b) TNN at $B=0$, (c) NN and (d) TNN under the Zeeman field. Unli",
+   "class": "definition",
+   "reason": "limit/condition (B=0, T=0, ...)",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/theory.tex",
+   "value": "0",
+   "context": "ow Fig.~\\ref{fig:bands}: (a) NN and (b) TNN at $B=0$, (c) NN and (d) TNN under the Zeeman field. $\\de",
+   "class": "definition",
+   "reason": "limit/condition (B=0, T=0, ...)",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/theory.tex",
+   "value": "four",
+   "context": "model for the four monolayers. I",
+   "class": "count-of-objects",
+   "reason": "count word",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/theory.tex",
+   "value": "four",
+   "context": "annels of the four monolayers (T",
+   "class": "count-of-objects",
+   "reason": "count word",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/theory.tex",
+   "value": "0",
+   "context": "anishes at $B=0$ in every mat",
+   "class": "definition",
+   "reason": "limit/condition (B=0, T=0, ...)",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/theory.tex",
+   "value": "0",
+   "context": "present at $B=0$ and changes ",
+   "class": "definition",
+   "reason": "limit/condition (B=0, T=0, ...)",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/theory.tex",
+   "value": "1",
+   "context": "h $\\tau = \\pm 1$ labeling the",
+   "class": "definition",
+   "reason": "orbital quantum numbers",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/theory.tex",
+   "value": "0",
+   "context": "e ($\\lambda = 0$, $B = 0$) ga",
+   "class": "definition",
+   "reason": "limit/condition (B=0, T=0, ...)",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/theory.tex",
+   "value": "four",
+   "context": "and model the four second-order ",
+   "class": "count-of-objects",
+   "reason": "count word",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/theory.tex",
+   "value": "0",
+   "context": "} g_{xx} \\neq 0$ [Eq.~\\eqref{",
+   "class": "definition",
+   "reason": "limit/condition (B=0, T=0, ...)",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/theory.tex",
+   "value": "three",
+   "context": "ter}, and the three equalities ar",
+   "class": "count-of-objects",
+   "reason": "count word",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/theory.tex",
+   "value": "0",
+   "context": " cancel at $b=0$, and the sum",
+   "class": "definition",
+   "reason": "limit/condition (B=0, T=0, ...)",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/theory.tex",
+   "value": "0",
+   "context": "($v^2 + 2wm > 0$).\n\n\\begin{fi",
+   "class": "definition",
+   "reason": "limit/condition (B=0, T=0, ...)",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/theory.tex",
+   "value": "0",
+   "context": "K'$ sum at $B=0$ (grey). At $",
+   "class": "definition",
+   "reason": "limit/condition (B=0, T=0, ...)",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/theory.tex",
+   "value": "0",
+   "context": "nonzero at $B=0$, equals twic",
+   "class": "definition",
+   "reason": "limit/condition (B=0, T=0, ...)",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/theory.tex",
+   "value": "0",
+   "context": "ancel at $b = 0$ and is even ",
+   "class": "definition",
+   "reason": "limit/condition (B=0, T=0, ...)",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/results.tex",
+   "value": "1",
+   "context": " $e = \\hbar = 1$ with energie",
+   "class": "definition",
+   "reason": "natural units e = hbar = 1",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/results.tex",
+   "value": "0",
+   "context": "exactly at $B=0$. Velocities ",
+   "class": "definition",
+   "reason": "limit/condition (B=0, T=0, ...)",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/results.tex",
+   "value": "0",
+   "context": "at{L}_z \\in \\{0, \\pm 2\\}$ fix",
+   "class": "definition",
+   "reason": "limit/condition (B=0, T=0, ...)",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/results.tex",
+   "value": "2",
+   "context": " \\in \\{0, \\pm 2\\}$ fixed by t",
+   "class": "definition",
+   "reason": "orbital quantum numbers",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/results.tex",
+   "value": "three",
+   "context": " $B$ from the three-band tight-bi",
+   "class": "count-of-objects",
+   "reason": "count word",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/results.tex",
+   "value": "0",
+   "context": "anishes at $B=0$, is odd unde",
+   "class": "definition",
+   "reason": "limit/condition (B=0, T=0, ...)",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/results.tex",
+   "value": "0",
+   "context": "tric about $B=0$, as expected",
+   "class": "definition",
+   "reason": "limit/condition (B=0, T=0, ...)",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/results.tex",
+   "value": "four",
+   "context": "-1}}$ for all four materials.\nTh",
+   "class": "count-of-objects",
+   "reason": "count word",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/discussion.tex",
+   "value": "four",
+   "context": "found for all four materials, co",
+   "class": "count-of-objects",
+   "reason": "count word",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/discussion.tex",
+   "value": "0",
+   "context": "the clean, $T=0$, single-part",
+   "class": "definition",
+   "reason": "limit/condition (B=0, T=0, ...)",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/discussion.tex",
+   "value": "three",
+   "context": "moment of the three-band model is",
+   "class": "count-of-objects",
+   "reason": "count word",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/discussion.tex",
+   "value": "three",
+   "context": "the hexagonal three-band model.\n\n",
+   "class": "count-of-objects",
+   "reason": "count word",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/discussion.tex",
+   "value": "four",
+   "context": "sitive in all four materials. Be",
+   "class": "count-of-objects",
+   "reason": "count word",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/appendix.tex",
+   "value": "three",
+   "context": " added to the three-band model of",
+   "class": "count-of-objects",
+   "reason": "count word",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/appendix.tex",
+   "value": "three",
+   "context": "\n\n\\subsection{Three-band tight-bi",
+   "class": "count-of-objects",
+   "reason": "count word",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/appendix.tex",
+   "value": "0",
+   "context": "ls carry $m = 0, \\pm 2$, so t",
+   "class": "definition",
+   "reason": "limit/condition (B=0, T=0, ...)",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/appendix.tex",
+   "value": "2",
+   "context": "y $m = 0, \\pm 2$, so the $\\ha",
+   "class": "definition",
+   "reason": "orbital quantum numbers",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/appendix.tex",
+   "value": "2",
+   "context": "berry}. For a 2D system every",
+   "class": "definition",
+   "reason": "dimension / polytype label",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/appendix.tex",
+   "value": "0",
+   "context": "i\\rangle_\\phi=0$ for odd $p$ ",
+   "class": "definition",
+   "reason": "limit/condition (B=0, T=0, ...)",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/appendix.tex",
+   "value": "1",
+   "context": "etting $\\tau=+1$ and insertin",
+   "class": "definition",
+   "reason": "valley index tau = +1",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/appendix.tex",
+   "value": "three",
+   "context": "origin of the three-fold anisotro",
+   "class": "count-of-objects",
+   "reason": "count word",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/appendix.tex",
+   "value": "0",
+   "context": "n}\nAt $\\kappa=0$ these are $\\",
+   "class": "definition",
+   "reason": "limit/condition (B=0, T=0, ...)",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/appendix.tex",
+   "value": "0",
+   "context": "i|_{\\kappa=0}=0$. The isotrop",
+   "class": "definition",
+   "reason": "limit/condition (B=0, T=0, ...)",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/appendix.tex",
+   "value": "0",
+   "context": "nonzero at $b=0$ and even in ",
+   "class": "definition",
+   "reason": "limit/condition (B=0, T=0, ...)",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/appendix.tex",
+   "value": "0",
+   "context": "^{-3}$ \\\\\n$\\to0$ & shift     ",
+   "class": "definition",
+   "reason": "limit/condition (B=0, T=0, ...)",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/appendix.tex",
+   "value": "0",
+   "context": "valleys at $B=0$ and is activ",
+   "class": "definition",
+   "reason": "limit/condition (B=0, T=0, ...)",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/appendix.tex",
+   "value": "0",
+   "context": "nonzero at $B=0$ and unchange",
+   "class": "definition",
+   "reason": "limit/condition (B=0, T=0, ...)",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/appendix.tex",
+   "value": "0",
+   "context": "ry. ``$\\approx0$'' marks valu",
+   "class": "definition",
+   "reason": "limit/condition (B=0, T=0, ...)",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/appendix.tex",
+   "value": "10",
+   "context": "values below $10^{-4}$ of the ",
+   "class": "definition",
+   "reason": "display rule of Table V: \"approx 0\" below 1e-4 of the row maximum",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/appendix.tex",
+   "value": "0",
+   "context": "K\\!+\\!K'$, $B=0$ & $K\\!+\\!K'$",
+   "class": "definition",
+   "reason": "limit/condition (B=0, T=0, ...)",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/appendix.tex",
+   "value": "0",
+   "context": "alley $K$, $B=0$ \\\\\n\\hline\nMa",
+   "class": "definition",
+   "reason": "limit/condition (B=0, T=0, ...)",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/appendix.tex",
+   "value": "0",
+   "context": "          & $\\approx0$ & $\\approx0$ & $\\a",
+   "class": "definition",
+   "reason": "limit/condition (B=0, T=0, ...)",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/appendix.tex",
+   "value": "0",
+   "context": "en)       & $\\approx0$ & $\\approx0$ & $\\a",
+   "class": "definition",
+   "reason": "limit/condition (B=0, T=0, ...)",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "main.tex",
+   "value": "four",
+   "context": " model across four semiconductin",
+   "class": "count-of-objects",
+   "reason": "count word",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "main.tex",
+   "value": "four",
+   "context": "rping for all four. If that warp",
+   "class": "count-of-objects",
+   "reason": "count word",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/introduction.tex",
+   "value": "four",
+   "context": "ork we survey four semiconductin",
+   "class": "count-of-objects",
+   "reason": "count word",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/theory.tex",
+   "value": "2",
+   "context": "($\\hat{L}_z = 2$). The phase-",
+   "class": "definition",
+   "reason": "orbital quantum numbers",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/theory.tex",
+   "value": "0",
+   "context": "n at $\\lambda=0$, $w=\\claim{f",
+   "class": "definition",
+   "reason": "limit/condition (B=0, T=0, ...)",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/results.tex",
+   "value": "2",
+   "context": "e $\\hat{L}_z=+2$, with $B>0$ ",
+   "class": "definition",
+   "reason": "orbital quantum numbers",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/results.tex",
+   "value": "0",
+   "context": "=+2$, with $B>0$ along $+\\hat",
+   "class": "definition",
+   "reason": "limit/condition (B=0, T=0, ...)",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/results.tex",
+   "value": "four",
+   "context": "}$~eV for the four materials fro",
+   "class": "count-of-objects",
+   "reason": "count word",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/results.tex",
+   "value": "four",
+   "context": "n pair of all four materials~\\ci",
+   "class": "count-of-objects",
+   "reason": "count word",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/discussion.tex",
+   "value": "four",
+   "context": "appa$ for all four materials~\\ci",
+   "class": "count-of-objects",
+   "reason": "count word",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/appendix.tex",
+   "value": "four",
+   "context": "e band of all four materials and",
+   "class": "count-of-objects",
+   "reason": "count word",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/appendix.tex",
+   "value": "0",
+   "context": "    & $\\approx0$ & $\\claim{ta",
+   "class": "definition",
+   "reason": "limit/condition (B=0, T=0, ...)",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/appendix.tex",
+   "value": "0",
+   "context": "$ at $\\lambda=0$ to $\\claim{w",
+   "class": "definition",
+   "reason": "limit/condition (B=0, T=0, ...)",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/introduction.tex",
+   "value": "2016",
+   "context": "d{added Stier 2016 and Goryca 20",
+   "class": "illustrative",
+   "reason": "REVIEW",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/introduction.tex",
+   "value": "2019",
+   "context": "16 and Goryca 2019, pulsed-field",
+   "class": "illustrative",
+   "reason": "REVIEW",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/theory.tex",
+   "value": "0",
+   "context": "er ($\\Gamma = 0$), the curren",
+   "class": "definition",
+   "reason": "limit/condition (B=0, T=0, ...)",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/theory.tex",
+   "value": "0",
+   "context": " limit, at $T=0$ and without ",
+   "class": "definition",
+   "reason": "limit/condition (B=0, T=0, ...)",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/theory.tex",
+   "value": "2",
+   "context": "ic), $\\Omega=-2\\,\\mathrm{Im}\\",
+   "class": "illustrative",
+   "reason": "REVIEW",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/theory.tex",
+   "value": "2",
+   "context": "ga^{bc}_{mn}=-2\\,\\mathrm{Im}\\",
+   "class": "illustrative",
+   "reason": "REVIEW",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/theory.tex",
+   "value": "0.51",
+   "context": " contribute $-0.51$ and $+0.46$~",
+   "class": "illustrative",
+   "reason": "REVIEW",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/theory.tex",
+   "value": "0.46",
+   "context": "$-0.51$ and $+0.46$~eV\\,\\AA$^2$ ",
+   "class": "illustrative",
+   "reason": "REVIEW",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/theory.tex",
+   "value": "four",
+   "context": "appa$ for all four materials, co",
+   "class": "count-of-objects",
+   "reason": "count word",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/theory.tex",
+   "value": "0",
+   "context": " as $\\delta\\to0$,\n\\begin{alig",
+   "class": "definition",
+   "reason": "limit/condition (B=0, T=0, ...)",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/theory.tex",
+   "value": "1",
+   "context": "ts} they add $1\\%$ at $E_g+0.",
+   "class": "illustrative",
+   "reason": "REVIEW",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/theory.tex",
+   "value": "0.01",
+   "context": "$1\\%$ at $E_g+0.01$~eV. The reso",
+   "class": "illustrative",
+   "reason": "REVIEW",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/results.tex",
+   "value": "60",
+   "context": ", because at $60$~T the field ",
+   "class": "illustrative",
+   "reason": "REVIEW",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/results.tex",
+   "value": "4",
+   "context": "_kp} ($\\zeta=-4$ to $-8$~eV\\,",
+   "class": "illustrative",
+   "reason": "REVIEW",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/results.tex",
+   "value": "8",
+   "context": "zeta=-4$ to $-8$~eV\\,\\AA$^3$ ",
+   "class": "illustrative",
+   "reason": "REVIEW",
+   "approved": false,
+   "status": "proposed"
+  },
+  {
+   "file": "sections/appendix.tex",
+   "value": "four",
+   "context": "mass. For the four materials $m_",
+   "class": "count-of-objects",
+   "reason": "count word",
+   "approved": false,
+   "status": "proposed"
+  }
+ ]
+}

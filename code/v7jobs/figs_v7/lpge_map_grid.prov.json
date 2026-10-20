@@ -1,0 +1,40 @@
+{
+ "figure": "Fig. 8 lpge_map_grid",
+ "date": "2026-10-14T08:45:35",
+ "script": "fig_v7_all.py",
+ "script_sha256": "ebad34266f4fa97040dc94be396dd0a5fa298a11eb8cdc5b31af0259f02685cf",
+ "engine_sha256": "ff4a692dbbd465b045bd82519ed7602d918793ddbfe9484d1912c59411a7b2f8",
+ "engine_consistent": true,
+ "engine_expected_prefix": "ff4a692d",
+ "engine_matches_expected": true,
+ "other_code_hashes": [],
+ "inputs_without_engine_hash": [],
+ "inputs": [
+  {
+   "path": "prod7_MoS2_F.npz",
+   "sha256": "827eef4c8617422baacd79703dfc7ece3a863f9e343ea5f382e533dde1de38e1",
+   "engine_sha256": "ff4a692dbbd465b045bd82519ed7602d918793ddbfe9484d1912c59411a7b2f8"
+  },
+  {
+   "path": "prod7_MoSe2_F.npz",
+   "sha256": "ceed61fcdb35efd1945bddf6b4582d57751002343b6c5809b3b4b5b9925efb1d",
+   "engine_sha256": "ff4a692dbbd465b045bd82519ed7602d918793ddbfe9484d1912c59411a7b2f8"
+  },
+  {
+   "path": "prod7_WS2_F.npz",
+   "sha256": "f3fc8a28e48abc8b1c8100f048ec23a360c511e8d0c09ff3f0754098c30108f7",
+   "engine_sha256": "ff4a692dbbd465b045bd82519ed7602d918793ddbfe9484d1912c59411a7b2f8"
+  },
+  {
+   "path": "prod7_WSe2_F.npz",
+   "sha256": "b09168e063f84073ba96cddfd2d69fff46b9a75bfc16c618566bb1e3b1fb3be0",
+   "engine_sha256": "ff4a692dbbd465b045bd82519ed7602d918793ddbfe9484d1912c59411a7b2f8"
+  }
+ ],
+ "python": "3.13.7",
+ "numpy": "2.5.3",
+ "matplotlib": "3.11.1",
+ "cwd": "/Users/abirmehta/Desktop/Code/CM/Claude outputs/code/v7jobs",
+ "output": "lpge_map_grid.pdf",
+ "output_sha256": "ae21a1ac4fb45a72d3e30d48ea4ce806f8dbf5b8fb69d4489b0e0e09b22b2c13"
+}

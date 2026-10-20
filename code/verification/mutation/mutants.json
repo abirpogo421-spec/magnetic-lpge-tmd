@@ -1,0 +1,560 @@
+{
+ "base": "CO/code/",
+ "checked": "2026-10-14; M35-M44 added from the red-team gaps (RT22, RT18a/b, RT12a, RT28, RT29, RT24, RT11c, RT26) and the decomp done-guard",
+ "smoke_patches": [
+  {
+   "file": "v7jobs/decomp_v7.py",
+   "old": "dict(N=600, nu=0.01)",
+   "new": "dict(N=24, nu=0.01)"
+  },
+  {
+   "file": "v7jobs/decomp_v7.py",
+   "old": "kl = L.local_kpts(0.9, 0.002)",
+   "new": "kl = L.local_kpts(0.3, 0.03)"
+  },
+  {
+   "file": "v7jobs/lam_v7.py",
+   "old": "H, NU, R = 0.002, 0.005, 0.9",
+   "new": "H, NU, R = 0.03, 0.005, 0.3"
+  },
+  {
+   "file": "v7jobs/lam_v7.py",
+   "old": "for i, lam in enumerate(lams):",
+   "new": "for i, lam in enumerate(lams[:2]):"
+  },
+  {
+   "file": "v7jobs/maps_v7.py",
+   "old": "np.linspace(-2*np.pi, 2*np.pi, 401), np.linspace(-2*np.pi, 2*np.pi, 401)",
+   "new": "np.linspace(-2*np.pi, 2*np.pi, 101), np.linspace(-2*np.pi, 2*np.pi, 101)"
+  },
+  {
+   "file": "kp/kp_fp_all_v7.py",
+   "old": "R=0.2, Nk=401",
+   "new": "R=0.2, Nk=101"
+  }
+ ],
+ "mutants": [
+  {
+   "id": "M01",
+   "file": "pub_pipeline/lpge.py",
+   "old": "raw = acc.reshape(len(om), 2, 2, 2)*np.pi*MEAS",
+   "new": "raw = acc.reshape(len(om), 2, 2, 2)*(-np.pi)*MEAS",
+   "class": "prefactor sign",
+   "equivalent": false,
+   "expected_killers": [
+    "R4",
+    "H7"
+   ]
+  },
+  {
+   "id": "M02",
+   "file": "v7jobs/maps_v7.py",
+   "old": "eta[i] = -2*r['si_factor']",
+   "new": "eta[i] = 2*r['si_factor']",
+   "class": "prefactor sign (script)",
+   "equivalent": false,
+   "expected_killers": [
+    "S2"
+   ]
+  },
+  {
+   "id": "M03",
+   "file": "v7jobs/decomp_v7.py",
+   "old": "PHYS = -2.0",
+   "new": "PHYS = 2.0",
+   "class": "prefactor sign (script)",
+   "equivalent": false,
+   "expected_killers": [
+    "S4"
+   ]
+  },
+  {
+   "id": "M04",
+   "file": "pub_pipeline/tb_core.py",
+   "old": "LZ = np.array([[0, 0, 0], [0, 0, 2j], [0, -2j, 0]], dtype=np.complex128)",
+   "new": "LZ = np.array([[0, 0, 0], [0, 0, -2j], [0, 2j, 0]], dtype=np.complex128)",
+   "class": "swapped valley",
+   "equivalent": false,
+   "expected_killers": [
+    "H6",
+    "U3",
+    "R1",
+    "R4"
+   ]
+  },
+  {
+   "id": "M05",
+   "file": "pub_pipeline/lpge.py",
+   "old": "x, y = X[m]*h, Y[m]*h; KX = 4*np.pi/3",
+   "new": "x, y = X[m]*h, Y[m]*h; KX = -4*np.pi/3",
+   "class": "valley label swap",
+   "equivalent": true,
+   "expected_killers": []
+  },
+  {
+   "id": "M06",
+   "file": "pub_pipeline/lpge.py",
+   "old": "return np.concatenate([x+KX, x-KX]), np.concatenate([y, y]), h*h",
+   "new": "return np.concatenate([x+KX, x+KX]), np.concatenate([y, y]), h*h",
+   "class": "broken T-pairing",
+   "equivalent": false,
+   "expected_killers": [
+    "H8",
+    "H2",
+    "H1"
+   ]
+  },
+  {
+   "id": "M07",
+   "file": "pub_pipeline/lpge.py",
+   "old": "si = E_SI**3*tb.A_PHYS/HBAR_SI**2",
+   "new": "si = E_SI**3/HBAR_SI**2",
+   "class": "dropped factor a",
+   "equivalent": false,
+   "expected_killers": [
+    "U1",
+    "R4"
+   ]
+  },
+  {
+   "id": "M08",
+   "file": "pub_pipeline/tb_core.py",
+   "old": "psm_coeff = E_SI * a**2 / HBAR_SI",
+   "new": "psm_coeff = E_SI * a / HBAR_SI",
+   "class": "dropped factor a (phase space)",
+   "equivalent": false,
+   "expected_killers": [
+    "U1",
+    "R2"
+   ]
+  },
+  {
+   "id": "M09",
+   "file": "pub_pipeline/lpge.py",
+   "old": "dn = H3 - (tb.LAM/2)*tb.LZ + zorb - zsp",
+   "new": "dn = H3 + (tb.LAM/2)*tb.LZ + zorb - zsp",
+   "class": "spin-block sign (SOC)",
+   "equivalent": false,
+   "expected_killers": [
+    "H5",
+    "R1",
+    "R4"
+   ]
+  },
+  {
+   "id": "M10",
+   "file": "pub_pipeline/lpge.py",
+   "old": "dn = H3 - (tb.LAM/2)*tb.LZ + zorb - zsp",
+   "new": "dn = H3 - (tb.LAM/2)*tb.LZ + zorb + zsp",
+   "class": "spin-block sign (spin Zeeman); equivalent for eta",
+   "equivalent": false,
+   "expected_killers": [
+    "H5",
+    "R1"
+   ]
+  },
+  {
+   "id": "M11",
+   "file": "pub_pipeline/lpge.py",
+   "old": "dn = H3 - (tb.LAM/2)*tb.LZ + zorb - zsp",
+   "new": "dn = H3 - (tb.LAM/2)*tb.LZ - zorb - zsp",
+   "class": "spin-block sign (orbital Zeeman)",
+   "equivalent": false,
+   "expected_killers": [
+    "H5",
+    "R1",
+    "R4"
+   ]
+  },
+  {
+   "id": "M12",
+   "file": "pub_pipeline/lpge.py",
+   "old": "L = (nu/np.pi)/((om[:, None]-ecv[None, b0:b0+lchunk])**2 + nu**2)",
+   "new": "L = (nu/np.pi)/((om[:, None]-np.round(ecv[None, b0:b0+lchunk]/2e-4)*2e-4)**2 + nu**2)",
+   "class": "binning reintroduced",
+   "equivalent": false,
+   "expected_killers": [
+    "H9",
+    "R4",
+    "T1"
+   ]
+  },
+  {
+   "id": "M13",
+   "file": "pub_pipeline/lpge.py",
+   "old": "L = (nu/np.pi)/((om[:, None]-ecv[None, b0:b0+lchunk])**2 + nu**2)",
+   "new": "L = (nu/np.pi)/((om[:, None]-ecv[None, b0:b0+lchunk])**2 + nu**2); L = L*((ecv[None, b0:b0+lchunk] > om.min()-40*nu) & (ecv[None, b0:b0+lchunk] < om.max()+40*nu))",
+   "class": "window cut reintroduced",
+   "equivalent": false,
+   "expected_killers": [
+    "H9",
+    "I1",
+    "I3",
+    "R4"
+   ]
+  },
+  {
+   "id": "M14",
+   "file": "kp/kp2.py",
+   "old": "NU = 0.01; WIN = 1e9",
+   "new": "NU = 0.01; WIN = 40",
+   "class": "window cut (k.p)",
+   "equivalent": false,
+   "expected_killers": [
+    "T1",
+    "I1",
+    "R8"
+   ]
+  },
+  {
+   "id": "M15",
+   "file": "pub_pipeline/lpge.py",
+   "old": "zorb = tb.MU_B*B*tb.LZ",
+   "new": "zorb = tb.MU_B*B*6.582119569e-16*tb.LZ",
+   "class": "wrong hbar in b",
+   "equivalent": false,
+   "expected_killers": [
+    "U3",
+    "R1"
+   ]
+  },
+  {
+   "id": "M16",
+   "file": "kp/kp_fp_all_v7.py",
+   "old": "b = MUB*30",
+   "new": "b = MUB*30*6.582119569e-16",
+   "class": "wrong hbar in b (k.p)",
+   "equivalent": false,
+   "expected_killers": [
+    "S6"
+   ]
+  },
+  {
+   "id": "M17",
+   "file": "kp/kp2.py",
+   "old": "dx = p['v']*tau*KX",
+   "new": "dx = p['v']*KX",
+   "class": "missing tau",
+   "equivalent": false,
+   "expected_killers": [
+    "R8",
+    "H2"
+   ]
+  },
+  {
+   "id": "M18",
+   "file": "v7jobs/edge_v7.py",
+   "old": "Bf = np.concatenate([-B[:0:-1], B])",
+   "new": "Bf = np.concatenate([-B[-2::-1], B])",
+   "class": "off-by-one field mirroring",
+   "equivalent": false,
+   "expected_killers": [
+    "S1"
+   ]
+  },
+  {
+   "id": "M19",
+   "file": "pub_pipeline/tmd_params.py",
+   "old": "\"MoSe2\":0.091",
+   "new": "\"MoSe2\":0.019",
+   "class": "wrong lambda",
+   "equivalent": false,
+   "expected_killers": [
+    "L1",
+    "L3",
+    "R1"
+   ]
+  },
+  {
+   "id": "M20",
+   "file": "pub_pipeline/tb_core.py",
+   "old": "lam = pnn['lambda']",
+   "new": "lam = 2*pnn['lambda']",
+   "class": "lambda convention (2 lambda)",
+   "equivalent": false,
+   "expected_killers": [
+    "L3",
+    "R1"
+   ]
+  },
+  {
+   "id": "M21",
+   "file": "pub_pipeline/lpge.py",
+   "old": "vd = vd - tb.MU_B*B*dM",
+   "new": "vd = vd + tb.MU_B*B*dM",
+   "class": "velocity-shift sign",
+   "equivalent": false,
+   "expected_killers": [
+    "R3",
+    "R4"
+   ]
+  },
+  {
+   "id": "M22",
+   "file": "pub_pipeline/lpge.py",
+   "old": "er = E - tb.MU_B*B*M if flags.get('mom') else E",
+   "new": "er = E + tb.MU_B*B*M if flags.get('mom') else E",
+   "class": "moment-energy sign",
+   "equivalent": false,
+   "expected_killers": [
+    "R4"
+   ]
+  },
+  {
+   "id": "M23",
+   "file": "pub_pipeline/lpge.py",
+   "old": "(D[:, v] if dos == 'v'",
+   "new": "(D[:, c] if dos == 'v'",
+   "class": "phase-space weight on wrong band",
+   "equivalent": false,
+   "expected_killers": [
+    "R4"
+   ]
+  },
+  {
+   "id": "M24",
+   "file": "pub_pipeline/lpge.py",
+   "old": "Om = -2*(S/dE**2).sum(-1).imag",
+   "new": "Om = 2*(S/dE**2).sum(-1).imag",
+   "class": "Berry curvature sign",
+   "equivalent": false,
+   "expected_killers": [
+    "R2",
+    "R4"
+   ]
+  },
+  {
+   "id": "M25",
+   "file": "pub_pipeline/lpge.py",
+   "old": "M = -ka*2*(S/dE).sum(-1).imag",
+   "new": "M = -ka*(S/dE).sum(-1).imag",
+   "class": "factor 2 in orbital moment",
+   "equivalent": false,
+   "expected_killers": [
+    "R2",
+    "R4"
+   ]
+  },
+  {
+   "id": "M26",
+   "file": "pub_pipeline/lpge.py",
+   "old": "EPS = 1e-4",
+   "new": "EPS = 1e-2",
+   "class": "finite-difference step",
+   "equivalent": false,
+   "expected_killers": [
+    "R2",
+    "C5",
+    "T1"
+   ]
+  },
+  {
+   "id": "M27",
+   "file": "pub_pipeline/lpge.py",
+   "old": "L = (nu/np.pi)/((om[:, None]",
+   "new": "L = (1/np.pi)/((om[:, None]",
+   "class": "Lorentzian normalization",
+   "equivalent": false,
+   "expected_killers": [
+    "H9",
+    "R4"
+   ]
+  },
+  {
+   "id": "M28",
+   "file": "pub_pipeline/lpge.py",
+   "old": "raw = 0.5*(raw + np.swapaxes(raw, -1, -2))",
+   "new": "raw = 1.0*raw",
+   "class": "drop (b,c) symmetrization; g already symmetric",
+   "equivalent": true,
+   "expected_killers": []
+  },
+  {
+   "id": "M29",
+   "file": "pub_pipeline/tb_core.py",
+   "old": "th = 2*np.pi/3",
+   "new": "th = np.pi/3",
+   "class": "C3 symmetrizer angle",
+   "equivalent": false,
+   "expected_killers": [
+    "R6",
+    "H3"
+   ]
+  },
+  {
+   "id": "M30",
+   "file": "pub_pipeline/tmd_params.py",
+   "old": "  \"MoS2\":  (0.683, 1.707, -0.146, -0.114, 0.506,",
+   "new": "  \"MoS2\":  (0.683, 1.707, -0.146, -0.114, 0.507,",
+   "class": "hopping typo (TNN t2 +0.001 eV)",
+   "equivalent": false,
+   "expected_killers": [
+    "L1"
+   ]
+  },
+  {
+   "id": "M31",
+   "file": "kp/kp_fp_all_v7.py",
+   "old": "mD = (EA + lam)/2",
+   "new": "mD = (EA + 2*lam)/2",
+   "class": "SOC counted twice in gap",
+   "equivalent": false,
+   "expected_killers": [
+    "L5"
+   ]
+  },
+  {
+   "id": "M32",
+   "file": "kp/kp_fp_all_v7.py",
+   "old": "'MoS2': (1.670, 2.76, -1.45,",
+   "new": "'MoS2': (1.670, 2.76, -1.48,",
+   "class": "wrong Kormanyos spin column (V-01)",
+   "equivalent": false,
+   "expected_killers": [
+    "L4",
+    "T2"
+   ]
+  },
+  {
+   "id": "M33",
+   "file": "v7jobs/lam_v7.py",
+   "old": "p = L.eta(mat, \"TNN\", None, 10.0, om, NU, FLAGS, kpts=kp, lam=lam)",
+   "new": "p = L.eta(mat, \"TNN\", None, 11.0, om, NU, FLAGS, kpts=kp, lam=lam)",
+   "class": "field normalization",
+   "equivalent": false,
+   "expected_killers": [
+    "S5"
+   ]
+  },
+  {
+   "id": "M34",
+   "file": "pub_pipeline/lpge.py",
+   "old": "tb.LAM = lam                 # SOC override",
+   "new": "tb.LAM = lam/2               # SOC override",
+   "class": "wrong lambda (override path)",
+   "equivalent": false,
+   "expected_killers": [
+    "R5",
+    "S5"
+   ]
+  },
+  {
+   "id": "M35",
+   "file": "pub_pipeline/lpge.py",
+   "old": "L = (nu/np.pi)/((om[:, None]-ecv[None, b0:b0+lchunk])**2 + nu**2)",
+   "new": "L = (nu/np.pi)/((om[:, None]-ecv[None, b0:b0+CHUNK])**2 + nu**2)",
+   "class": "large-grid-only accumulation (red team RT22)",
+   "equivalent": false,
+   "expected_killers": [
+    "I5"
+   ],
+   "extra": [
+    {
+     "old": "acc += L @ T[b0:b0+lchunk]",
+     "new": "acc += L @ T[b0:b0+CHUNK]"
+    }
+   ]
+  },
+  {
+   "id": "M36",
+   "file": "pub_pipeline/lpge.py",
+   "old": "np.concatenate([y, y]), h*h",
+   "new": "np.concatenate([y, y]), h*h*np.sqrt(3)/2",
+   "class": "area element sqrt3/2, disks (RT18a)",
+   "equivalent": false,
+   "expected_killers": [
+    "U4",
+    "R4"
+   ]
+  },
+  {
+   "id": "M37",
+   "file": "pub_pipeline/tb_core.py",
+   "old": "dArea = abs(np.linalg.det(J))/N**2",
+   "new": "dArea = abs(np.linalg.det(J))/N**2*np.sqrt(3)/2",
+   "class": "area element sqrt3/2, full BZ (RT18b)",
+   "equivalent": false,
+   "expected_killers": [
+    "U4",
+    "R4"
+   ]
+  },
+  {
+   "id": "M38",
+   "file": "v7jobs/edge_v7.py",
+   "old": "r = L.eta(mat, model, None, float(B), om, nu, FL, functional=FUNC, kpts=kl)",
+   "new": "r = L.eta(mat, model, None, float(B), om, nu, FL, kpts=kl)",
+   "class": "LDA runs use the GGA H (RT12a)",
+   "equivalent": false,
+   "expected_killers": [
+    "S1"
+   ]
+  },
+  {
+   "id": "M39",
+   "file": "v7jobs/edge_v7.py",
+   "old": "for blk in L._H6(4*np.pi/3 + q, 0*q, model, 0.0):",
+   "new": "for blk in L._H6(4*np.pi/3 + q, 0*q, \"TNN\", 0.0):",
+   "class": "E_g from TNN for NN runs (RT28)",
+   "equivalent": false,
+   "expected_killers": [
+    "S1"
+   ]
+  },
+  {
+   "id": "M40",
+   "file": "v7jobs/decomp_v7.py",
+   "old": "'MoSe2': 3.043",
+   "new": "'MoSe2': 3.430",
+   "class": "fallback vH table typo (RT29)",
+   "equivalent": false,
+   "expected_killers": [
+    "S4"
+   ]
+  },
+  {
+   "id": "M41",
+   "file": "v7jobs/decomp_v7.py",
+   "old": "np.argmax(np.abs(_d['eta'][-1]))",
+   "new": "np.argmax(_d['eta'][-1])",
+   "class": "vH = argmax of signed eta (RT24)",
+   "equivalent": false,
+   "expected_killers": [
+    "S4"
+   ]
+  },
+  {
+   "id": "M42",
+   "file": "v7jobs/fig_v7.py",
+   "old": "return np.concatenate([-B[:0:-1], B]), np.concatenate([-Y[:0:-1], Y])",
+   "new": "return np.concatenate([-B[:0:-1], B]), np.concatenate([-Y[-2::-1], Y])",
+   "class": "figure mirroring off by one (RT11c)",
+   "equivalent": false,
+   "expected_killers": [
+    "S6"
+   ]
+  },
+  {
+   "id": "M43",
+   "file": "v7jobs/run_v7_queue.sh",
+   "old": "python3 edge_v7.py $m $mo 0.0007 2 GGA",
+   "new": "python3 edge_v7.py $m $mo 0.007 2 GGA",
+   "class": "queue grid typo hidden by a red check (RT26)",
+   "equivalent": false,
+   "expected_killers": [
+    "G6"
+   ]
+  },
+  {
+   "id": "M44",
+   "file": "v7jobs/decomp_v7.py",
+   "old": "if _meta['done'] == len(_d['B_tesla']):",
+   "new": "if True:",
+   "class": "partial prod7 accepted (red team sec. 3)",
+   "equivalent": false,
+   "expected_killers": [
+    "S4"
+   ]
+  }
+ ]
+}

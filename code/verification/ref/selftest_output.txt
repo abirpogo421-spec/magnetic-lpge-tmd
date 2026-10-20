@@ -1,0 +1,196 @@
+
+==============================================================================
+1. Constants and unit conversions
+==============================================================================
+[PASS] mu_B = e hbar/2m_e (eV/T) vs 5.7883818060e-5: dev=6.000e-10 (tol 1.0e-09) 
+[INFO] m_e a^2/hbar^2 (1/eV), GGA, MoS2/MoSe2/WS2/WSe2: [1.335, 1.452, 1.336, 1.451, 'paper: 1.3-1.5']
+[AGREE] m_e a^2/hbar^2 inside paper's 1.3-1.5 1/eV: dev=0.000e+00 (tol 1.0e-12) 
+[INFO] mu_B B = 80 meV corresponds to B (T): 1382  (paper: ~1.4e3 T)
+[INFO] prefactor -2 pi e^3 a/hbar^2, MoS2 (A m V^-2 s^-1): -7.412239e+02
+[INFO] hbar/e (T m^2) used in D = 1 + B Omega a^2 /(hbar/e): 6.582120e-16
+
+==============================================================================
+2. Hamiltonian: transcription, Hermiticity, symmetries, derivatives
+==============================================================================
+[PASS] term-list H3 == literal factored Liu/appendix formulas (24 parameter sets): dev=2.997e-16 (tol 1.0e-13) 
+[PASS] Hermiticity of H3 and spin blocks (B=37 T): dev=0.000e+00 (tol 1.0e-14) 
+[PASS] H6 = blockdiag(H_up, H_down), zero spin-flip blocks: dev=0.000e+00 (tol 1.0e-15) 
+[PASS] periodicity H3(k+G) = H3(k): dev=1.322e-15 (tol 1.0e-12) 
+[PASS] time reversal H3(-k) = H3(k)^*: dev=0.000e+00 (tol 1.0e-14) 
+[PASS] vertical mirror x->-x: H3(-kx,ky) = Mx H3 Mx, Mx=diag(1,-1,1) (d_xy odd): dev=0.000e+00 (tol 1.0e-14) 
+[PASS] C3 invariance of spin-block spectra (SOC + B=41 T), all sets: dev=8.438e-15 (tol 1.0e-12) 
+[PASS] analytic dH, d2H vs central differences (h=1e-4): dev=6.215e-09 (tol 1.0e-07) 
+
+==============================================================================
+3. Literature values (Liu et al.)
+==============================================================================
+[PASS] NN band energies at Gamma, K, M = Liu Table I closed forms (12 sets): dev=2.220e-15 (tol 1.0e-12) 
+[INFO] MoS2 NN GGA gap at K, lambda=0 (eV): 1.6628  (Liu Fig.10: Delta = 1.663 eV)
+[INFO] MoS2 TNN GGA gap at K, lambda=0 (eV): 1.6579  (Liu Fig.10: Delta = 1.663 eV)
+[AGREE] MoS2 NN GGA gap at K (lambda=0) = 1.663 eV (Liu Fig. 10, 3 digits): dev=2.005e-04 (tol 5.0e-04) 
+[PASS] valence spin splitting at K = 2 lambda (first-order SOC, Liu Sec. IV): dev=1.138e-15 (tol 1.0e-12) 
+[INFO] Liu Table IV Delta_SOC^v vs 2*lambda (GGA): MoS2: 0.148 vs 0.146, MoSe2: 0.184 vs 0.182, WS2: 0.430 vs 0.422, WSe2: 0.466 vs 0.456  (difference = Liu's lambda^2/E_12 correction)
+[PASS] valence state at K=(4pi/3a,0) has L_z=+2, at K' L_z=-2 (paper sign convention): dev=1.998e-15 (tol 1.0e-12) 
+
+==============================================================================
+4. Band geometry: Berry curvature, orbital moment, D, velocity shift
+==============================================================================
+[PASS] sum_n Omega_n = 0: dev=6.517e-16 (tol 1.0e-12) 
+[PASS] Omega_n (sum rule) vs plaquette Berry phase -Im ln prod<u|u'>/h^2: dev=5.973e-09 (tol 1.0e-05) 
+[INFO] MoS2 TNN at K (spin up, B=60T): M_v=-3.138 M_c=-4.183 mu_B ; Omega_v=+1.716 a^2 ; |D_v-1|=0.0159 |D_c-1|=0.0172
+[INFO] MoSe2 TNN at K (spin up, B=60T): M_v=-2.595 M_c=-3.752 mu_B ; Omega_v=+1.628 a^2 ; |D_v-1|=0.0164 |D_c-1|=0.0185
+[INFO] WS2 TNN at K (spin up, B=60T): M_v=-4.625 M_c=-5.883 mu_B ; Omega_v=+2.474 a^2 ; |D_v-1|=0.0230 |D_c-1|=0.0247
+[INFO] WSe2 TNN at K (spin up, B=60T): M_v=-4.146 M_c=-5.551 mu_B ; Omega_v=+2.569 a^2 ; |D_v-1|=0.0259 |D_c-1|=0.0285
+[AGREE] |D_n - 1| < 3% at 60 T for v,c bands within 0.3/a of K,K' (paper claim): dev=9.498e-01 (tol 1.0e+00) max |D-1| = 0.0285
+[INFO] |M_v|,|M_c| at K, four materials TNN (mu_B): [3.12, 4.17, 2.58, 3.73, 4.6, 5.86, 4.12, 5.52, 'paper: 3-6 mu_B']
+[PASS] MoS2: valley g of A transition from H_Z alone = -4 (on-site L_z = 2 tau): dev=1.078e-11 (tol 1.0e-08) 
+[INFO] MoS2 valley g = [E_A(K)-E_A(K')]/mu_B B: H_Z only -4.000 ; with itinerant moment -1.918
+[PASS] WSe2: valley g of A transition from H_Z alone = -4 (on-site L_z = 2 tau): dev=3.106e-12 (tol 1.0e-08) 
+[INFO] WSe2 valley g = [E_A(K)-E_A(K')]/mu_B B: H_Z only -4.000 ; with itinerant moment -1.204
+[PASS] dM/dk: step 1e-3 vs 5e-4 (4th-order stencil): dev=2.723e-11 (tol 1.0e-08) 
+[PASS] velocity shift = -mu_B B dM/dk: dev=0.000e+00 (tol 1.0e-15) 
+[PASS] Hellmann-Feynman band velocity vs d(eps)/dkx (FD): dev=4.020e-10 (tol 1.0e-08) 
+
+==============================================================================
+5. Generic machinery on a pure two-band (warped Dirac) Hamiltonian
+==============================================================================
+[PASS] tau=+1: TB-machinery Delta^x_cv == 2 d_x|d|: dev=5.309e-16 (tol 1.0e-12) 
+[PASS] tau=+1: TB-machinery g^xx_cv == 1/4 |d_x n|^2: dev=1.277e-15 (tol 1.0e-12) 
+[PASS] tau=+1: TB-machinery g^xy_cv == 1/4 d_x n.d_y n: dev=1.270e-15 (tol 1.0e-11) 
+[PASS] tau=+1: Omega_v (sum rule) == +1/2 n.(dn x dn): dev=1.531e-15 (tol 1.0e-12) 
+[PASS] tau=+1: two-band M_c == M_v (paper Sec. II C): dev=4.142e-16 (tol 1.0e-12) 
+[PASS] tau=-1: TB-machinery Delta^x_cv == 2 d_x|d|: dev=4.312e-16 (tol 1.0e-12) 
+[PASS] tau=-1: TB-machinery g^xx_cv == 1/4 |d_x n|^2: dev=1.277e-15 (tol 1.0e-12) 
+[PASS] tau=-1: TB-machinery g^xy_cv == 1/4 d_x n.d_y n: dev=1.314e-15 (tol 1.0e-11) 
+[PASS] tau=-1: Omega_v (sum rule) == +1/2 n.(dn x dn): dev=1.071e-15 (tol 1.0e-12) 
+[PASS] tau=-1: two-band M_c == M_v (paper Sec. II C): dev=4.142e-16 (tol 1.0e-12) 
+[PASS] two-band M(k=0) = -(m_e a^2/hbar^2) tau v^2/m: dev=0.000e+00 (tol 1.0e-12) 
+[PASS] two-band Omega_v(k=0) = +v^2/(2 m^2) (tau=+1): dev=0.000e+00 (tol 1.0e-12) 
+
+==============================================================================
+6. Two-band k.p ring averages vs paper closed forms (v=1, m=0.83, kappa=0.25)
+==============================================================================
+[AGREE] k=0.03: exact ring <Delta^x g_xx> vs paper Table (exact column 3.922e-04): dev=2.383e-06 (tol 1.5e-03) got 3.92201e-04
+[AGREE] k=0.03: closed form kappa v^3 k^2/m^3 vs paper Table (3.935e-04): dev=8.069e-06 (tol 1.5e-03) 
+[PASS] k=0.03: next-order closed form exact through O(k^4): (exact-next)/k^6 constant (k vs k/2): dev=1.374e-03 (tol 2.0e-02) (exact-next)/k^6 = +4.0635 vs +4.0690
+[PASS] k=0.03: C3 family <D^x g_xx> = -<D^x g_yy> = -<D^y g_xy> = -<D^y g_yx>: dev=4.423e-15 (tol 1.0e-12) 
+[PASS] k=0.03: mirror-forbidden <D^y g_yy>, <D^y g_xx>, <D^x g_xy> vanish: dev=4.423e-15 (tol 1.0e-12) 
+[PASS] k=0.03: electric/gyration-type <Delta^a Omega> vanish (C3): dev=4.423e-15 (tol 1.0e-12) 
+[PASS] k=0.03: <Im C^cv_y;(yy)> - kappa v(2m^2-3k^2v^2)/4m^4 is O(k^4): dev=6.913e-01 (tol 5.0e+00) ratio/k^4=+0.691
+[PASS] k=0.03: shift beta family Im C_y;yy = -Im C_y;xx = -Im C_x;xy: dev=1.533e-16 (tol 1.0e-12) 
+[PASS] k=0.03: Im C^cv == Im Cbar^cv (two-band): dev=0.000e+00 (tol 1.0e-12) 
+[AGREE] k=0.05: exact ring <Delta^x g_xx> vs paper Table (exact column 1.083e-03): dev=5.231e-05 (tol 1.5e-03) got 1.08306e-03
+[AGREE] k=0.05: closed form kappa v^3 k^2/m^3 vs paper Table (1.093e-03): dev=5.890e-05 (tol 1.5e-03) 
+[PASS] k=0.05: next-order closed form exact through O(k^4): (exact-next)/k^6 constant (k vs k/2): dev=3.817e-03 (tol 2.0e-02) (exact-next)/k^6 = +4.0503 vs +4.0657
+[PASS] k=0.05: C3 family <D^x g_xx> = -<D^x g_yy> = -<D^y g_xy> = -<D^y g_yx>: dev=1.602e-15 (tol 1.0e-12) 
+[PASS] k=0.05: mirror-forbidden <D^y g_yy>, <D^y g_xx>, <D^x g_xy> vanish: dev=3.203e-15 (tol 1.0e-12) 
+[PASS] k=0.05: electric/gyration-type <Delta^a Omega> vanish (C3): dev=0.000e+00 (tol 1.0e-12) 
+[PASS] k=0.05: <Im C^cv_y;(yy)> - kappa v(2m^2-3k^2v^2)/4m^4 is O(k^4): dev=6.896e-01 (tol 5.0e+00) ratio/k^4=+0.690
+[PASS] k=0.05: shift beta family Im C_y;yy = -Im C_y;xx = -Im C_x;xy: dev=0.000e+00 (tol 1.0e-12) 
+[PASS] k=0.05: Im C^cv == Im Cbar^cv (two-band): dev=0.000e+00 (tol 1.0e-12) 
+[AGREE] k=0.08: exact ring <Delta^x g_xx> vs paper Table (exact column 2.733e-03): dev=1.086e-04 (tol 1.5e-03) got 2.73330e-03
+[AGREE] k=0.08: closed form kappa v^3 k^2/m^3 vs paper Table (2.798e-03): dev=8.749e-05 (tol 1.5e-03) 
+[PASS] k=0.08: next-order closed form exact through O(k^4): (exact-next)/k^6 constant (k vs k/2): dev=9.769e-03 (tol 2.0e-02) (exact-next)/k^6 = +4.0184 vs +4.0577
+[PASS] k=0.08: C3 family <D^x g_xx> = -<D^x g_yy> = -<D^y g_xy> = -<D^y g_yx>: dev=3.173e-15 (tol 1.0e-12) 
+[PASS] k=0.08: mirror-forbidden <D^y g_yy>, <D^y g_xx>, <D^x g_xy> vanish: dev=1.983e-17 (tol 1.0e-12) 
+[PASS] k=0.08: electric/gyration-type <Delta^a Omega> vanish (C3): dev=1.269e-15 (tol 1.0e-12) 
+[PASS] k=0.08: <Im C^cv_y;(yy)> - kappa v(2m^2-3k^2v^2)/4m^4 is O(k^4): dev=6.856e-01 (tol 5.0e+00) ratio/k^4=+0.686
+[PASS] k=0.08: shift beta family Im C_y;yy = -Im C_y;xx = -Im C_x;xy: dev=1.551e-16 (tol 1.0e-12) 
+[PASS] k=0.08: Im C^cv == Im Cbar^cv (two-band): dev=0.000e+00 (tol 1.0e-12) 
+[AGREE] k->0: shift constant kappa v/2m^2 = 1.8145e-1 (paper Table): dev=7.262e-06 (tol 5.0e-05) got 0.181449
+[PASS] valley parity: injection odd in tau: dev=8.008e-16 (tol 1.0e-12) 
+[PASS] valley parity: shift even in tau: dev=0.000e+00 (tol 1.0e-12) 
+[PASS] b=0.0001: <eta>_K+K' ~ 6 kappa v^3 b k^2/(m_D-lam/2)^4 (fixed k, O(k^4,b^3)): dev=2.517e-03 (tol 3.0e-03) sum=1.29194e-07 lin=1.29520e-07
+[PASS] b=0.001: <eta>_K+K' ~ 6 kappa v^3 b k^2/(m_D-lam/2)^4 (fixed k, O(k^4,b^3)): dev=2.513e-03 (tol 3.0e-03) sum=1.29194e-06 lin=1.29520e-06
+
+==============================================================================
+7. Lowdin reduction at K (kappa, v, w)
+==============================================================================
+[INFO] MoS2 GGA active spin: v_TNN=4.9296 eV A, kappa_TNN=-0.2365, kappa_NN=-0.0430 eV A^2, w_TNN=-6.459 eV A^2 ; paper: 4.93, -0.24, -0.04
+[AGREE] MoS2: Lowdin v, kappa(TNN), kappa(NN) = paper Table II to rounding: dev=6.987e-01 (tol 1.0e+00) 
+[PASS] MoS2 NN: numerical kappa = paper closed form Eq.(kappa_nn) with SOC-shifted E's: dev=6.212e-14 (tol 1.0e-10) 
+[PASS] MoS2 NN: numerical v/a = t = 3 sqrt2/4 (t1+sqrt3 t2): dev=1.637e-16 (tol 1.0e-12) 
+[PASS] MoS2 TNN: H(K) diagonal in Lowdin basis; cv block = v(tau qx-iqy)+kappa(tau qx+iqy)^2 exactly: dev=3.583e-14 (tol 1.0e-12) 
+[PASS] MoS2 TNN: kappa, v identical at K' (time reversal): dev=0.000e+00 (tol 1.0e-12) 
+[INFO] MoSe2 GGA active spin: v_TNN=4.2987 eV A, kappa_TNN=-0.0215, kappa_NN=+0.0265 eV A^2, w_TNN=-5.588 eV A^2 ; paper: 4.3, -0.02, +0.03
+[AGREE] MoSe2: Lowdin v, kappa(TNN), kappa(NN) = paper Table II to rounding: dev=7.088e-01 (tol 1.0e+00) 
+[PASS] MoSe2 NN: numerical kappa = paper closed form Eq.(kappa_nn) with SOC-shifted E's: dev=7.541e-14 (tol 1.0e-10) 
+[PASS] MoSe2 NN: numerical v/a = t = 3 sqrt2/4 (t1+sqrt3 t2): dev=0.000e+00 (tol 1.0e-12) 
+[PASS] MoSe2 TNN: H(K) diagonal in Lowdin basis; cv block = v(tau qx-iqy)+kappa(tau qx+iqy)^2 exactly: dev=3.281e-13 (tol 1.0e-12) 
+[PASS] MoSe2 TNN: kappa, v identical at K' (time reversal): dev=0.000e+00 (tol 1.0e-12) 
+[INFO] WS2 GGA active spin: v_TNN=5.9026 eV A, kappa_TNN=-0.0223, kappa_NN=-0.5123 eV A^2, w_TNN=-7.685 eV A^2 ; paper: 5.9, -0.02, -0.51
+[AGREE] WS2: Lowdin v, kappa(TNN), kappa(NN) = paper Table II to rounding: dev=5.245e-01 (tol 1.0e+00) 
+[PASS] WS2 NN: numerical kappa = paper closed form Eq.(kappa_nn) with SOC-shifted E's: dev=3.684e-15 (tol 1.0e-10) 
+[PASS] WS2 NN: numerical v/a = t = 3 sqrt2/4 (t1+sqrt3 t2): dev=1.400e-16 (tol 1.0e-12) 
+[PASS] WS2 TNN: H(K) diagonal in Lowdin basis; cv block = v(tau qx-iqy)+kappa(tau qx+iqy)^2 exactly: dev=4.317e-13 (tol 1.0e-12) 
+[PASS] WS2 TNN: kappa, v identical at K' (time reversal): dev=0.000e+00 (tol 1.0e-12) 
+[INFO] WSe2 GGA active spin: v_TNN=5.2051 eV A, kappa_TNN=+0.0849, kappa_NN=-0.2628 eV A^2, w_TNN=-6.439 eV A^2 ; paper: 5.21, +0.09, -0.26
+[DISCREPANCY] WSe2: Lowdin v, kappa(TNN), kappa(NN) = paper Table II to rounding: dev=1.018e+00 (tol 1.0e+00) 
+[PASS] WSe2 NN: numerical kappa = paper closed form Eq.(kappa_nn) with SOC-shifted E's: dev=7.817e-15 (tol 1.0e-10) 
+[PASS] WSe2 NN: numerical v/a = t = 3 sqrt2/4 (t1+sqrt3 t2): dev=0.000e+00 (tol 1.0e-12) 
+[PASS] WSe2 TNN: H(K) diagonal in Lowdin basis; cv block = v(tau qx-iqy)+kappa(tau qx+iqy)^2 exactly: dev=9.396e-14 (tol 1.0e-12) 
+[PASS] WSe2 TNN: kappa, v identical at K' (time reversal): dev=0.000e+00 (tol 1.0e-12) 
+[PASS] MoS2 TNN: (hbar^2/4m_e)(1/m_c+1/|m_v|) from TB curvature = w + v^2/2m: dev=9.999e-07 (tol 1.0e-05) lhs=8.87404 rhs=8.87405
+[PASS] MoSe2 TNN: (hbar^2/4m_e)(1/m_c+1/|m_v|) from TB curvature = w + v^2/2m: dev=1.076e-06 (tol 1.0e-05) lhs=8.21910 rhs=8.21911
+[PASS] WS2 TNN: (hbar^2/4m_e)(1/m_c+1/|m_v|) from TB curvature = w + v^2/2m: dev=1.351e-06 (tol 1.0e-05) lhs=14.15584 rhs=14.15585
+[PASS] WSe2 TNN: (hbar^2/4m_e)(1/m_c+1/|m_v|) from TB curvature = w + v^2/2m: dev=1.540e-06 (tol 1.0e-05) lhs=14.19135 rhs=14.19137
+[INFO] MoS2 TNN kappa without SOC: -0.1793 eV A^2 (paper Fig. kp_spectra uses -0.18)
+[INFO] WS2 TNN kappa at lambda = 0, lam0, 1.5 lam0: [0.1267, -0.0223, -0.1099, 'paper: +0.13, -0.02, -0.11']
+[AGREE] WS2 TNN kappa(lambda) = +0.13, -0.02, -0.11 (paper App. D) to rounding: dev=6.577e-01 (tol 1.0e+00) 
+[INFO] MoS2 TNN LDA kappa: +0.0078 eV A^2  (paper: +0.01)
+[INFO] MoSe2 TNN LDA kappa: +0.4557 eV A^2
+[INFO] WS2 TNN LDA kappa: +0.2694 eV A^2
+[INFO] WSe2 TNN LDA kappa: +0.6180 eV A^2
+[AGREE] MoS2 TNN LDA kappa = +0.01 eV A^2 (paper Sec. III C) to rounding: dev=4.498e-01 (tol 1.0e+00) 
+
+==============================================================================
+8. k-grids
+==============================================================================
+[PASS] BZ grid: k -> -k maps grid onto itself (mod G): dev=0.000e+00 (tol 0.0e+00) 
+[PASS] BZ grid: weights sum to BZ area: dev=0.000e+00 (tol 1.0e-14) 
+[PASS] disk grid: K' disk = -(K disk) exactly: dev=0.000e+00 (tol 0.0e+00) 
+[PASS] disk grid: area -> pi R^2 per disk: dev=1.833e-03 (tol 2.0e-03) 
+
+==============================================================================
+9. Injection coefficient eta^{a;bc} (tight binding)
+==============================================================================
+[INFO] MoS2 TNN GGA E_g (active, B=0, at K): 1.58492 eV
+[PASS] disk grid: eta(-B) = -eta(B) (all 8 components, B=20 T): dev=2.902e-12 (tol 1.0e-09) 
+[PASS] disk grid: eta(B=0) = 0: dev=1.447e-12 (tol 1.0e-11) 
+[INFO] single valley K at B=0 vs K+K' at 20 T (eta^xxx): [0.02035677 0.06970908 0.10146434] vs [0.00377125 0.00444331 0.00406654]
+[PASS] spin Zeeman (constant per spin block) leaves eta unchanged: dev=1.048e-11 (tol 1.0e-10) 
+[PASS] linear in B at small field: eta(2T)/eta(1T) = 2 (rel dev): dev=1.720e-05 (tol 1.0e-03) 
+[AGREE] E_g+0.01: deviation from linear law at 60 T < 1% (paper Sec. III C): dev=3.345e-01 (tol 1.0e+00) deviation 0.0033
+[PASS] C3-symmetrized disk: alpha family xxx = -xyy = -yxy = -yyx: dev=8.436e-11 (tol 1.0e-10) 
+[PASS] C3-symmetrized disk: beta family of eta (yyy, yxx, xxy) = 0 (sigma_v T): dev=1.585e-12 (tol 1.0e-10) 
+[PASS] symmetric in (bc): eta^{a;xy} = eta^{a;yx}: dev=2.828e-14 (tol 1.0e-13) 
+[PASS] BZ grid N=90: eta(-B) = -eta(B): dev=1.019e-12 (tol 1.0e-09) 
+[PASS] BZ grid: alpha family xxx = -xyy = -yxy = -yyx (C3, no symmetrization): dev=3.042e-10 (tol 1.0e-09) 
+[PASS] BZ grid: beta family of magnetic injection vanishes: dev=2.237e-14 (tol 1.0e-09) 
+[PASS] BZ grid: in-plane electric injection eta_el^{a;[xy]} = 0 (C3): dev=6.789e-11 (tol 1.0e-09) 
+[INFO] anti-resonant Lorentzian tails (pairs='all' minus resonant), rel. to eta^xxx: [-5.6e-05, -1.2e-05, 1.1e-05]
+[INFO] MoS2 TNN N=90 B=30T eta^xxx [H_Z only] at [2.2, 2.8, 3.35] eV: [-0.2028 -0.5193  0.4393]
+[INFO] MoS2 TNN N=90 B=30T eta^xxx [+energy shift] at [2.2, 2.8, 3.35] eV: [-0.2246 -0.7356  0.7243]
+[INFO] MoS2 TNN N=90 B=30T eta^xxx [+velocity shift] at [2.2, 2.8, 3.35] eV: [-0.2242 -0.8361  0.8342]
+[INFO] MoS2 TNN N=90 B=30T eta^xxx [all] at [2.2, 2.8, 3.35] eV: [-0.2261 -0.8692  0.8073]
+[PASS] eta: dM/dk step 1e-3 vs 5e-4: dev=2.370e-10 (tol 1.0e-08) 
+
+==============================================================================
+10. Shift current sigma^{a;(bc)} (tight binding, projector formalism)
+==============================================================================
+[PASS] B=0: beta family yyy = -yxx = -xxy = -xyx: dev=6.021e-09 (tol 1.0e-06) 
+[PASS] B=0: mirror-forbidden alpha family of shift (xxx, xyy, yxy) = 0: dev=7.398e-15 (tol 1.0e-06) 
+[PASS] shift current even in B: sigma(30T) = sigma(-30T): dev=3.064e-13 (tol 1.0e-06) 
+[PASS] shift: FD step for d2P, 1e-4 vs 5e-5: dev=8.039e-09 (tol 1.0e-06) 
+[INFO] MoS2 TNN sigma^{y;yy} N=60 nu=20meV (nm muA V^-2): B=0: [-5.5313, -149.3831] ; B=30T change: [0.00139, -0.00063]
+
+==============================================================================
+11. INFO: threshold field coefficient (coarse; compare signs with paper)
+==============================================================================
+[INFO] MoS2 TNN GGA chi(E_g+0.01) = eta(10T)/10T, disk R=0.3/a h=0.003/a nu=5meV: +1.885e-04 A m V^-2 s^-1 T^-1   (paper, R=0.6 h=0.001: +1.9e-04)
+[INFO] MoSe2 TNN GGA chi(E_g+0.01) = eta(10T)/10T, disk R=0.3/a h=0.003/a nu=5meV: +2.149e-05 A m V^-2 s^-1 T^-1   (paper, R=0.6 h=0.001: +2.0e-05)
+[INFO] WS2 TNN GGA chi(E_g+0.01) = eta(10T)/10T, disk R=0.3/a h=0.003/a nu=5meV: +7.369e-06 A m V^-2 s^-1 T^-1   (paper, R=0.6 h=0.001: +7.0e-06)
+[INFO] WSe2 TNN GGA chi(E_g+0.01) = eta(10T)/10T, disk R=0.3/a h=0.003/a nu=5meV: -4.972e-05 A m V^-2 s^-1 T^-1   (paper, R=0.6 h=0.001: -5.0e-05)
+
+SUMMARY: code checks 96/96 passed; paper comparisons 16/17 agree; runtime 148.2 s
+  DISCREPANCY: WSe2: Lowdin v, kappa(TNN), kappa(NN) = paper Table II to rounding

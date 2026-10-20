@@ -1,0 +1,39 @@
+{
+ "_comment": "Repository config: the suite lives in code/verification/. Relative paths are relative to this folder. The paper source and the v6-era data are not in this repository; point paper_root at a local copy of the paper to enable the claims checks.",
+ "paths": {
+  "code_root": "..",
+  "paper_root": "../../paper",
+  "data_v6": "../../paper/v6_work/figure_data/data",
+  "results_v6": "../../paper/v6_work/results_numbers",
+  "v7_out": "../v7jobs",
+  "kp_out": "../kp",
+  "literature": "literature",
+  "reports": "reports",
+  "cache": "cache",
+  "v7_checks": "../v7jobs/checks",
+  "v7_figs": "../v7jobs/figs_v7",
+  "v6_code": "../../paper/v6_work/code",
+  "v6_jobs": "../v6jobs"
+ },
+ "engine_files": [
+  "kp/kp2.py",
+  "pub_pipeline/lpge.py",
+  "pub_pipeline/tb_core.py",
+  "pub_pipeline/tmd_params.py"
+ ],
+ "scripts": [
+  "v7jobs/edge_v7.py",
+  "v7jobs/maps_v7.py",
+  "v7jobs/chiw9_v7.py",
+  "v7jobs/lam_v7.py",
+  "v7jobs/decomp_v7.py",
+  "v7jobs/fig_v7.py",
+  "v7jobs/fig_v7_all.py",
+  "kp/kp_fp_all_v7.py",
+  "v7jobs/run_v7_queue.sh"
+ ],
+ "budget_warn_s": 600,
+ "script_paths": {},
+ "_comment_script_paths": "script_paths maps a script id to its real location when it is not under code_root (e.g. fig_v7_all.py before it is moved into v7jobs/).",
+ "_comment_v7": "v7_out holds prod7/edge7/chiwR9v7/lam7/decomp7 (Mac: the v7jobs folder itself); v7_checks the convergence-check jsons (c2/c3/c4); v7_figs the fig_v7_all.py output (numbers_v7.json). Set paper_root to the folder of the tagged paper source."
+}

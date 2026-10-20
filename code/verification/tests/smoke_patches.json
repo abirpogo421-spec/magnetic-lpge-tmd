@@ -1,0 +1,35 @@
+{
+ "_comment": "Exact-string patches that shrink hard-coded sizes for the script smoke tests (protocol S1-S6). A patch that no longer applies exactly once makes the dependent S test STALE.",
+ "patches": [
+  {
+   "file": "v7jobs/decomp_v7.py",
+   "old": "dict(N=600, nu=0.01)",
+   "new": "dict(N=24, nu=0.01)"
+  },
+  {
+   "file": "v7jobs/decomp_v7.py",
+   "old": "kl = L.local_kpts(0.9, 0.002)",
+   "new": "kl = L.local_kpts(0.3, 0.03)"
+  },
+  {
+   "file": "v7jobs/lam_v7.py",
+   "old": "H, NU, R = 0.002, 0.005, 0.9",
+   "new": "H, NU, R = 0.03, 0.005, 0.3"
+  },
+  {
+   "file": "v7jobs/lam_v7.py",
+   "old": "for i, lam in enumerate(lams):",
+   "new": "for i, lam in enumerate(lams[:2]):"
+  },
+  {
+   "file": "v7jobs/maps_v7.py",
+   "old": "np.linspace(-2*np.pi, 2*np.pi, 401), np.linspace(-2*np.pi, 2*np.pi, 401)",
+   "new": "np.linspace(-2*np.pi, 2*np.pi, 101), np.linspace(-2*np.pi, 2*np.pi, 101)"
+  },
+  {
+   "file": "kp/kp_fp_all_v7.py",
+   "old": "R=0.2, Nk=401",
+   "new": "R=0.2, Nk=101"
+  }
+ ]
+}

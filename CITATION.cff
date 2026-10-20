@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper below."
+title: "magnetic-lpge-tmd: magnetic injection current in monolayer transition-metal dichalcogenides"
+authors:
+  - family-names: Mehta
+    given-names: Abir
+  - family-names: Adhidewata
+    given-names: Jyesta
+    affiliation: "Department of Physics, University of California, Berkeley"
+license: MIT
+repository-code: "https://github.com/abirpogo421-spec/magnetic-lpge-tmd"
+keywords:
+  - linear photogalvanic effect
+  - magnetic injection current
+  - quantum geometry
+  - transition-metal dichalcogenides
+  - tight-binding
+preferred-citation:
+  type: article
+  title: "Magnetic activation of the injection current in the linear photogalvanic effect of monolayer transition-metal dichalcogenides"
+  authors:
+    - family-names: Mehta
+      given-names: Abir
+    - family-names: Adhidewata
+      given-names: Jyesta
+  status: preprint
+  year: 2026

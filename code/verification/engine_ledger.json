@@ -1,0 +1,88 @@
+{
+ "_comment": "Accepted engine trees (protocol sec. 2, 8). 'legacy' maps the lpge-only hash written by the v7 queue to the full tree_sha after --ledger-legacy has checked the other files; 'pre_fix' lists engines whose outputs are STALE; 'certificates' are equivalence certificates (identical I/R fixture outputs at rel 1e-12 plus a declared non-numerical change).",
+ "accepted": [
+  {
+   "tree_sha": "0c8e29953579c54f6659361a06f11af75146c1fe1fa86f0c24585d409aae97da",
+   "since": "2026-10-14",
+   "reason": "v7 engine (V-03/V-04 fixed); first fast-mode verification 2026-10-14"
+  }
+ ],
+ "legacy": [
+  {
+   "legacy_lpge_sha256": "ff4a692dbbd465b045bd82519ed7602d918793ddbfe9484d1912c59411a7b2f8",
+   "tree_sha": "0c8e29953579c54f6659361a06f11af75146c1fe1fa86f0c24585d409aae97da",
+   "files": {
+    "kp/kp2.py": "5e7b0aad0e5df18ea50f0e541c5e01471a6d69fc84527006c9081440076ec1ac",
+    "pub_pipeline/lpge.py": "ff4a692dbbd465b045bd82519ed7602d918793ddbfe9484d1912c59411a7b2f8",
+    "pub_pipeline/tb_core.py": "54d6a0b8951eb8ee075b5fc2ed14d3fcd89407f6555ae41346dedded42454e31",
+    "pub_pipeline/tmd_params.py": "120e92e68e2a4a399adfa878f12e97c1f026fab0297c83ce10d5d701f4c0e4b7"
+   },
+   "scripts": {
+    "v7jobs/edge_v7.py": "d17ce39359ea1257e35a9f7f63412f20d6178c4344575e7edd19a70e6086c680",
+    "v7jobs/maps_v7.py": "8b5deb5bd808506b6b9592e4928b4c2c616ad8aadfd662bd262ee6b2e7007349",
+    "v7jobs/chiw9_v7.py": "35f5f7656b7837f13db2423813860409b3eb7dc8fb9205cd171dcdc66ec7acce",
+    "v7jobs/lam_v7.py": "287e5094e129bb8bc25dcf8b8296920fcae1d91b377a923936c0e1e96cd50ecb",
+    "v7jobs/decomp_v7.py": "214e441c5605ed0f93307797291f5ffb4fd6c6a656f4a733a0344b7f912155e9",
+    "v7jobs/fig_v7.py": "5f052a46c0f76868238a6fc9473ade0f0953655edf7a25c746ef869526071cf0",
+    "v7jobs/fig_v7_all.py": "ebad34266f4fa97040dc94be396dd0a5fa298a11eb8cdc5b31af0259f02685cf",
+    "kp/kp_fp_all_v7.py": "10dad1ad83f40b21168fd0cbd1f45d0df8f59dd7c99ffeb39a1087db8dc4138d",
+    "v7jobs/run_v7_queue.sh": "82a6f8cac2a7b95853e5e62c0ce28329fcdee68e3cc641ab5a099cd0e35848bf"
+   },
+   "checked": [
+    {
+     "time": "2026-10-14T01:23:38",
+     "host": "vm"
+    },
+    {
+     "time": "2026-10-14T03:22:20",
+     "host": "vm",
+     "scripts_changed": [
+      "v7jobs/decomp_v7.py"
+     ]
+    },
+    {
+     "time": "2026-10-14T07:44:45",
+     "host": "vm",
+     "scripts_changed": [
+      "v7jobs/fig_v7_all.py"
+     ]
+    },
+    {
+     "time": "2026-10-14T09:12:41",
+     "host": "Abirs-MacBook-Air.local",
+     "scripts_changed": [
+      "v7jobs/decomp_v7.py"
+     ]
+    }
+   ],
+   "script_history": [
+    {
+     "time": "2026-10-14T03:22:20",
+     "host": "vm",
+     "script": "v7jobs/decomp_v7.py",
+     "old": "dab427a706fb01cd",
+     "new": "db2a0ba3db90a1c1cbbb65330a634a64627e0003ba90720a948f65cae78f37b3"
+    },
+    {
+     "time": "2026-10-14T07:44:45",
+     "host": "vm",
+     "script": "v7jobs/fig_v7_all.py",
+     "old": "25b54c2a4146e4dc459c307c073a8f2b213a58c873420d4dd2b9d692b958e9f6",
+     "new": "ebad34266f4fa97040dc94be396dd0a5fa298a11eb8cdc5b31af0259f02685cf"
+    },
+    {
+     "time": "2026-10-14T09:12:41",
+     "host": "Abirs-MacBook-Air.local",
+     "script": "v7jobs/decomp_v7.py",
+     "old": "db2a0ba3db90a1c1cbbb65330a634a64627e0003ba90720a948f65cae78f37b3",
+     "new": "214e441c5605ed0f93307797291f5ffb4fd6c6a656f4a733a0344b7f912155e9"
+    }
+   ]
+  }
+ ],
+ "pre_fix": {
+  "0f4089f02e419ee0f58e2196e68c8f1cb867393ef136ab2f534ae01ea1a28f22": "v6 lpge (0.2 meV binning + 40 nu window cut, V-03/V-04): every output is STALE"
+ },
+ "certificates": [],
+ "checks": []
+}

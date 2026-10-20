@@ -1,0 +1,29 @@
+name: checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Reference implementation self-test
+        run: python3 code/verification/ref/selftest.py
+      - name: First-principles k.p threshold coefficients
+        working-directory: code/kp
+        run: python3 kp_fp_all_v7.py
+      - name: Run the setup and Figs. 1-4 notebooks
+        working-directory: notebooks
+        run: |
+          jupyter nbconvert --to notebook --execute engine.ipynb --output /tmp/engine.ipynb
+          jupyter nbconvert --to notebook --execute nn_tnn.ipynb --output /tmp/nn_tnn.ipynb

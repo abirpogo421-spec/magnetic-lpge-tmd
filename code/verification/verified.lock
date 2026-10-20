@@ -1,0 +1,17 @@
+{
+ "tree_sha": "0c8e29953579c54f6659361a06f11af75146c1fe1fa86f0c24585d409aae97da",
+ "script_shas": {
+  "v7jobs/edge_v7.py": "d17ce39359ea1257e35a9f7f63412f20d6178c4344575e7edd19a70e6086c680",
+  "v7jobs/maps_v7.py": "8b5deb5bd808506b6b9592e4928b4c2c616ad8aadfd662bd262ee6b2e7007349",
+  "v7jobs/chiw9_v7.py": "35f5f7656b7837f13db2423813860409b3eb7dc8fb9205cd171dcdc66ec7acce",
+  "v7jobs/lam_v7.py": "287e5094e129bb8bc25dcf8b8296920fcae1d91b377a923936c0e1e96cd50ecb",
+  "v7jobs/decomp_v7.py": "214e441c5605ed0f93307797291f5ffb4fd6c6a656f4a733a0344b7f912155e9",
+  "v7jobs/fig_v7.py": "5f052a46c0f76868238a6fc9473ade0f0953655edf7a25c746ef869526071cf0",
+  "v7jobs/fig_v7_all.py": "ebad34266f4fa97040dc94be396dd0a5fa298a11eb8cdc5b31af0259f02685cf",
+  "kp/kp_fp_all_v7.py": "10dad1ad83f40b21168fd0cbd1f45d0df8f59dd7c99ffeb39a1087db8dc4138d",
+  "v7jobs/run_v7_queue.sh": "82a6f8cac2a7b95853e5e62c0ce28329fcdee68e3cc641ab5a099cd0e35848bf"
+ },
+ "mode": "fast",
+ "report": "reports/2026-10-14_0919_fast.md",
+ "written": "2026-10-14T09:19:08"
+}
