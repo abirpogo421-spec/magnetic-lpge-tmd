@@ -66,7 +66,7 @@ The suite compares the engine against a reference implementation written only fr
 
 ## Conventions
 
-- Physical current: $\eta_{\rm phys} = -2\,\eta_{\rm code}$ (spin sum and electron charge).
+- Physical current: $\eta_{\rm phys} = -2\,(e^3a/\hbar^2)\,\eta_{\rm code}$. The engine sums both spin blocks and accumulates the $k$-sum with prefactor $\pi$; the paper's prefactor is $-2\pi e^3a/\hbar^2$ (golden-rule $2\pi$, electron charge $-e$).
 - Threshold: $\hbar\omega = E_g + 0.01$ eV. Field coefficient $\chi = \partial_B\eta^{x;xx}$ in $\mathrm{A\,m\,V^{-2}s^{-1}T^{-1}}$.
 - Field model "F": Zeeman coupling plus the orbital-moment energy shift, phase-space factor and velocity shift.
 - In the notebooks momenta are in units of $1/a$ and energies in eV. `kp/kp2.py` uses Å.
