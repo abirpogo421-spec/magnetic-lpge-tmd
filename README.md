@@ -22,6 +22,7 @@ code/
   pub_pipeline/       production engine: tb_core.py, tmd_params.py, lpge.py
   kp/                 two-band k.p engine (kp2.py) and first-principles k.p runs
   v7jobs/             production run scripts, results (JSON/NPZ) and figure script for Figs. 7-12
+  v6/                 v6-era engine and run that made Fig. 5
   verification/       independent reference implementation and test suite (see VERIFICATION.md)
 docs/
   reproducing.md      which script or notebook produces each figure, table and number
@@ -62,7 +63,7 @@ python3 verify_all.py --full      # production grids and convergence (hours)
 python3 verify_all.py --mutants   # planted-bug test
 ```
 
-The suite compares the engine against a reference implementation written only from the paper and Liu *et al.*, reruns short copies of every production script, checks symmetry, units and convergence, and checks each printed number against `claims.json`. `VERIFICATION.md` explains every check. The claims checks need a local copy of the paper source (`paths.paper_root` in `config.json`). Without it they are skipped, and G6 reports four Fig. 5 parameters as unchecked because the v6-era Fig. 5 scripts are not included (see `docs/reproducing.md`).
+The suite compares the engine against a reference implementation written only from the paper and Liu *et al.*, reruns short copies of every production script, checks symmetry, units and convergence, and checks each printed number against `claims.json`. `VERIFICATION.md` explains every check. The claims checks need a local copy of the paper source (`paths.paper_root` in `config.json`). Without it they are skipped.
 
 ## Conventions
 

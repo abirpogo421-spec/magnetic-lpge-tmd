@@ -3,7 +3,7 @@
  "paths": {
   "code_root": "..",
   "paper_root": "../../paper",
-  "data_v6": "../../paper/v6_work/figure_data/data",
+  "data_v6": "../v6/figure_data",
   "results_v6": "../../paper/v6_work/results_numbers",
   "v7_out": "../v7jobs",
   "kp_out": "../kp",
@@ -12,8 +12,8 @@
   "cache": "cache",
   "v7_checks": "../v7jobs/checks",
   "v7_figs": "../v7jobs/figs_v7",
-  "v6_code": "../../paper/v6_work/code",
-  "v6_jobs": "../v6jobs"
+  "v6_code": "../v6/v6_work_code",
+  "v6_jobs": "../v6/v6jobs"
  },
  "engine_files": [
   "kp/kp2.py",
