@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "magnetic-lpge-tmd"
+version = "1.0.0"
+description = "Notebooks for the magnetic injection current in monolayer TMDs"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Abir Mehta" }, { name = "Jyesta Adhidewata" }]
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.24",
+  "scipy>=1.10",
+  "matplotlib>=3.7",
+  "jupyterlab>=4.0",
+  "nbclient>=0.7",
+  "nbformat>=5.7",
+  "ipykernel>=6.0",
+]
+
+[project.scripts]
+reproduce-lpge = "reproduce:main"
+
+[tool.setuptools]
+py-modules = ["reproduce"]
